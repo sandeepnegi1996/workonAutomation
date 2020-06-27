@@ -5,12 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Page {
 
 	public static WebDriver driver = null;
+	public static Actions action=null;
 
 	// initConfiguration
 	public static void initConfiguration() {
@@ -36,7 +39,7 @@ public class Page {
 
 			driver.manage().window().maximize();
 			driver.get(baseURL);
-
+			action=new Actions(driver);
 			System.out.println("webdriver object is initialized");
 
 		}

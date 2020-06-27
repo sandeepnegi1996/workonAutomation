@@ -37,22 +37,22 @@ public class DashboardPage extends Page {
 	 * 
 	 */
 	
-	public void gotoSearchBox() {
+	public SearchPage gotoSearchBox() {
+		/*
+		 *return the object of the searchPage
+		 * 
+		 */
 		
+		return new SearchPage();
 	}
 	
 	public void gotoCentralSearch() {
 		
 		System.out.println("inside the gotoCentralSearch");
 		
-		/*driver.findElement(By.xpath("//a[contains(text(),'WorkON Central Search')]")).click();*/
-		
 		click(dashboardpagelocator.centralSearchLink);
 		
 		System.out.println("clicked on the central search page links");
-		
-		
-		
 	}
 	
 	public void gotoWorkONArchive() {
