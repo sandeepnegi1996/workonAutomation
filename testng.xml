@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.workon.rough.NewTest1"/>
+      <class name="com.workon.rough.DashboardTestCentralSearch"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
