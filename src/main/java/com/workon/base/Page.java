@@ -1,9 +1,10 @@
 package com.workon.base;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -12,23 +13,37 @@ public class Page {
 	public static WebDriver driver=null;
 
 	// initConfiguration
-	public  void initConfiguration() {
+	public static void initConfiguration() {
+		
+		String baseURL=Constant.dashboardQUrl;
+		int waitingTime=Constant.waitingTimeConstant;
 		
 		if(driver==null) {
 			
-			//webdrivermanager
-			WebDriverManager.chromedriver().setup();
-			//webdriver
+			if(Constant.chromeBrowser.equals("chrome")) {
+					
+				//webdrivermanager
+				WebDriverManager.chromedriver().setup();
+				driver=new ChromeDriver();
+	
+			}
+		
+		else if(Constant.firefoxBrowser.equals("firefox")) {
 			
-			driver.get(url);
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			WebDriverManager.firefoxdriver().setup();
+			driver=new FirefoxDriver();
+		
 		}
+			
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(waitingTime, TimeUnit.SECONDS);
+			driver.get(baseURL);
+	
 	}
 
-
+	}
 	// quitBrowser
-	public void quitBrowser() {
+	public static void quitBrowser() {
 		
 		if(driver!=null) {
 			driver.quit();
