@@ -7,4 +7,8 @@ public class SearchPageLocators {
 
 	@FindBy(css="#searchInputField")
 	public WebElement searchInput;
+	
+	
+	@FindBy(xpath="//a[@title='Request a new workflow for RB General Approval Form']")
+	public WebElement rbgaNewRequest;
 }

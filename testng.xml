@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.workon.rough.DashboardTestCentralSearch"/>
+<!--       <class name="com.workon.rough.DashboardTestCentralSearch"/> -->
+       <class name="com.workon.testcases.generic.TestCase_RBGARequestCreation"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

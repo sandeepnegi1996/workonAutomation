@@ -1,0 +1,301 @@
+
+
+
+1. search RBGA
+//clicking on the new request
+
+//a[@title='Request a new workflow for RB General Approval Form']
+
+
+
+	
+	@FindBy(xpath="//body[contains(@class,'ext-safari')]/form[contains(@name,'workOnIssueForm')]/table[contains(@class,'jiraform maxWidth')]/tbody/tr/td[contains(@class,'rb_formArea')]/fieldset[contains(@class,'rb_WorkON_FieldSet')]/table/tbody/tr/td/div[contains(@class,'rb_WorkON_FieldContainer')]/div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create rb_WorkON_ValueArea_Wide')]/table[contains(@class,'workonstdtable')]/tbody/tr/td/input[1]")
+	public WebElement tickMark;
+	
+
+	@FindBy(xpath="//body[contains(@class,'ext-safari')]/form[contains(@name,'workOnIssueForm')]/table[contains(@class,'jiraform maxWidth')]/tbody/tr/td[contains(@class,'rb_formArea')]/fieldset[contains(@class,'rb_WorkON_FieldSet')]/table/tbody/tr[3]/td[1]/div[1]/div[1]/input[1]")
+	public WebElement subject;
+
+
+	@FindBy(xpath="//tr[1]//td[1]//div[1]//div[1]//textarea[1]")
+	public WebElement description;
+	
+	@FindBy(xpath="//a[contains(text(),'Workflow')]")
+	public WebElement workflowTab;
+			
+
+
+// Add an Approver button
+
+//button[contains(text(),'Add an approver')]
+the problem is we have 4 buttons like these it means we have to add some context to this button 
+
+
+
+@FindAll
+-->it contains FindBy inside it means at least one of findby shoudl be there
+
+
+@FindBys
+--> it contains FindBy which means it should contains all the findBy basically means AND operations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+this is for the subject
+
+//input[@type='text' and @class='textfield' and @xpath='1']
+
+//div[@class='rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ']//input[@type='text']
+
+
+
+//span[contains(text(),'Subject')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input[@type='text']
+
+
+# above mentioned is for the subject
+
+# summary
+
+//label[contains(text(),'Summary')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+
+#phone
+
+//span[contains(text(),'Phone')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input[@type='text']
+
+
+
+
+
+#Part name
+
+//label[contains(text(),'Part Name *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+
+
+#Priority
+
+//label[contains(text(),'Priority')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+
+
+RBTA
+
+this is the relative path formed by me 
+
+//div[@class='rb_WorkON_FieldContainer']//div[@class='rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create rb_WorkON_ValueArea_Wide']//select
+
+
+
+
+
+Business  -->this is different from the rest of the above 
+
+//label[contains(text(),'Business')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+=============================================================================================================
+working
+
+
+
+Line or Process
+
+ Line or Process *
+
+ //label[contains(text(),'Line or Process *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+ Machine name
+Machine Name *
+
+//label[contains(text(),'Machine Name *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+Maximum Stock
+Maximum Stock *
+
+//label[contains(text(),'Maximum Stock *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+Reorder Point
+Reorder point *
+
+//label[contains(text(),'Reorder point *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+Description brand and models
+
+//label[contains(text(),'Description (Brand,Models) *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+
+
+Reason (M-FMEA) *
+
+//label[contains(text(),'Reason (M-FMEA) *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+Delivery Time *
+//label[contains(text(),'Delivery Time *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+Description / Remarks
+
+//label[contains(text(),'Description / Remarks')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+
+
+
+
+# After edit and Approve I have fill the details and approve
+
+
+
+#Price
+
+//fieldset[@id='newfirstsap']//label[contains(text(),'Price *') and @class='rb_WorkON_LabelArea']//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_edit')]//input[@type='text']
+
+
+
+
+
+# Supplier Name *
+
+//fieldset[@id='newfirstsap']//label[contains(text(),'Supplier Name *') and @class='rb_WorkON_LabelArea']//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_edit')]//input[@type='text']
+
+
+
+# MRP Type *
+
+
+//fieldset[@id='newfirstsap']//label[contains(text(),'MRP Type *') and @class='rb_WorkON_LabelArea']//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_edit')]//input[@type='text']
+
+
+
+#Comment
+
+//textarea[@id='comment']
+
+
+# after filling everyting I need to go to the workflow tab to add myself as a approver of the request
+
+# workflow
+//a[contains(text(),'Workflow')]
+
+
+# use the same used in AMAZE request creation to choose the approver
+
+editPositionApmazeXpath=//img[@class='ApprovalListGridControlButton_Edit']
+
+enterNtidApmazeXpath=//input[@id='NameFilterField']
+
+selectNTIDApmazeXPath=//td[contains(@class,'x-grid3-col x-grid3-cell x-grid3-td-name x-grid3-cell-first')]
+
+
+
+#Confirm Approve
+
+//input[@id='WorkOnSubmitButton']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==============================================================================================
+
+RBGA
+
+// Brief Description
+
+
+//span[contains(text(),'Brief Description:*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input[@type='text']
+
+
+// Description
+
+
+//span[contains(text(),'Description:*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//textarea[@class='textarea']
+
+
+
+
+-=====================================================================
+
+
+
+Functional testing PBI 20329
+
+
+1. Workon profile button
+
+img[@class='linkarrow sprite-lnkarrow']//parent::a[@class='useful-links-arrow']
+
+img[contains(@class,'linkarrow sprite-lnkarrow')]
+
+//a[@class='useful-links-arrow']//img
+//img[@class='linkarrow']
+
+
+driver.findElement(By.linkText("WorkON Profile)).click();
+
+
+
+
+2.Clickin on the I act for tab
+
+
+//span[contains(text(),'I act for')]
+
+
+//span[@id='linkfive']//parent::a
+//span[contains(text(),'I act for')]//parent::a[@id='fivetab']
+
+
+//ul[@id='tab_example_one']//li
+
+ //ul[@id='tab_example_one']//li[3]
+
+ //==========================================================
+
+
+
+
+
+
+
+
+
+

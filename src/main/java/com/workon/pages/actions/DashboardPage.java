@@ -21,7 +21,7 @@ public class DashboardPage extends Page {
 		
 		AjaxElementLocatorFactory factory=new AjaxElementLocatorFactory(driver, 15);
 		
-		//we wanrt to initialize the elements of the dashboardpagelocatos so that why in the pagefactory init elements we have given the dashboadpagelocator 
+		//we want to initialize the elements of the dashboardpagelocatos so that why in the pagefactory init elements we have given the dashboadpagelocator 
 		PageFactory.initElements(factory, this.dashboardpagelocator);
 		
 		System.out.println("inside the dashboard page object of dashboardpagelocators is initialized");
