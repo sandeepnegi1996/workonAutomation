@@ -3,6 +3,7 @@ package com.workon.pages.actions.rbga;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
@@ -57,6 +58,18 @@ public class RBGARequestCreation extends Page {
 		WebElement firstApproverBtn= rbgaRequestLocator.approverBtn.get(0);
 		
 		click(firstApproverBtn);
+		
+		//enter the ntid
+		type(rbgaRequestLocator.enterNtid,"end1cob");
+		action.sendKeys(Keys.chord(Keys.ENTER)).perform();
+		
+		//actually we don't need to switch back to the secondwindowId 
+		driver.switchTo().window(secondWindowId);
+		
+		
+		click(rbgaRequestLocator.selectNtid);
+		
+		
 		
 		//click on the submit button
 		click(rbgaRequestLocator.submitBtn);

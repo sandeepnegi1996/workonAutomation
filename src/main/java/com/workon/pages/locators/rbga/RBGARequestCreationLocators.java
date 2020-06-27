@@ -28,16 +28,12 @@ public class RBGARequestCreationLocators {
 	@FindBy(xpath="//button[contains(text(),'Add an approver')]")
 	public  List<WebElement> approverBtn;
 	
+	@FindBy(css="#NameFilterField")
+	public WebElement enterNtid;
 	
-	/*
-	 * 
-	 * ntidId=NameFilterField
-
-
-# Select NTID Xpath
-selectNtidXPath=//div[contains(@class,'x-grid3-cell-inner x-grid3-col-name')]
-	 * 
-	 */
+	@FindBy(xpath="//div[contains(@class,'x-grid3-cell-inner x-grid3-col-name')]")
+	public WebElement selectNtid;
+	
 
 	@FindBy(css="#WorkOnSubmitButton")
 	public WebElement submitBtn;
