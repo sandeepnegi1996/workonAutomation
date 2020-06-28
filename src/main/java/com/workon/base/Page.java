@@ -1,5 +1,7 @@
 package com.workon.base;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -67,5 +69,20 @@ public class Page {
 	public void type(WebElement element, String inputString) {
 		element.sendKeys(inputString);
 	}
+	
+
+	// any child class can use this function to switch to the new tab
+	public void switchToSecondTab() {
+		
+		System.out.println("******  generating all the windows id ************");
+		Set<String> windowID=driver.getWindowHandles();
+		Iterator<String> itr= windowID.iterator();
+		String firstWindow= itr.next();
+		String secondWindow=itr.next();		
+		driver.switchTo().window(secondWindow);
+		
+	}
+	
+	
 
 }
