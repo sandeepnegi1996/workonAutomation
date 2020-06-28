@@ -26,20 +26,8 @@ public class RBGARequestCreation extends Page {
 	}
 	
 	public void rbgaRequestCreation() {
-		
-		// This shifting to the next window we can put in the Central Page
-		
-		System.out.println("generating all the windows id means tab id");
-		Set<String> windowsID= driver.getWindowHandles();
-		
-		Iterator<String> itr= windowsID.iterator();
-		String firstWindowId= itr.next();
-		String secondWindowId=itr.next();
-		
-		System.out.println(secondWindowId);
-		
-		driver.switchTo().window(secondWindowId);
-		
+
+		switchToSecondTab();
 		
 		//clicking the tick mark
 		
@@ -65,9 +53,6 @@ public class RBGARequestCreation extends Page {
 		type(rbgaRequestLocator.enterNtid,"end1cob");
 		action.sendKeys(Keys.chord(Keys.ENTER)).perform();
 		
-		//actually we don't need to switch back to the secondwindowId 
-		driver.switchTo().window(secondWindowId);
-		
 		
 		click(rbgaRequestLocator.selectNtid);
 		
@@ -80,5 +65,7 @@ public class RBGARequestCreation extends Page {
 		
 		
 	}
+
+
 
 }

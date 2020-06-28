@@ -5,6 +5,8 @@
     <classes>
 <!--       <class name="com.workon.rough.DashboardTestCentralSearch"/> -->
        <class name="com.workon.testcases.generic.TestCase_RBGARequestCreation"/>
+        <class name="com.workon.testcases.generic.TestCase_APMAZERequestCreation"/>
+       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

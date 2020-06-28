@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import com.workon.base.Page;
+import com.workon.pages.actions.apmaze.APMAZERequestCreation;
 import com.workon.pages.actions.rbga.RBGARequestCreation;
 import com.workon.pages.locators.SearchPageLocators;
 
@@ -45,13 +46,19 @@ public class SearchPage extends Page {
 
 	}
 
-	public void gotoAPMAZE() throws InterruptedException {
+	public APMAZERequestCreation gotoAPMAZE() throws InterruptedException {
 
 		type(searchpage.searchInput, "APMAZE");
 		System.out.println("APMAZE being searched");
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
+		//after searching click on the new Request
+		
+		click(searchpage.apmazeNewRequest);
+		
 		Thread.sleep(3000);
+		
+		return new APMAZERequestCreation();
 
 	}
 

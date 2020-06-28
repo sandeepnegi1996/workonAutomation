@@ -11,27 +11,28 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class TestCase_RBGARequestCreation {
-  @Test
-  public void rbgaRequestCreation() throws InterruptedException {
-	  
-	  Page.initConfiguration();
-	  DashboardPage dp=new DashboardPage();
-	 SearchPage sp= dp.gotoSearchBox();
-	 RBGARequestCreation rbga= sp.gotoRBGA();
-	 rbga.rbgaRequestCreation();
-	  
-	  Thread.sleep(4000);
-	  Page.quitBrowser();
-  }
-  
-  
-  
-  @BeforeClass
-  public void beforeClass() {
-  }
 
-  @AfterClass
-  public void afterClass() {
-  }
+	@BeforeClass
+	public void beforeClass() {
+		Page.initConfiguration();
+
+	}
+
+	@AfterClass
+	public void afterClass() {
+		Page.quitBrowser();
+	}
+
+	@Test
+	public void rbgaRequestCreation() throws InterruptedException {
+
+		DashboardPage dp = new DashboardPage();
+		SearchPage sp = dp.gotoSearchBox();
+		RBGARequestCreation rbga = sp.gotoRBGA();
+		rbga.rbgaRequestCreation();
+
+		Thread.sleep(4000);
+
+	}
 
 }
