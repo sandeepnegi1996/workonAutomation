@@ -24,9 +24,22 @@ public class APMAZERequestCreation extends Page {
 		 * 5. Submit the Form
 		 */
 		
-		switchToSecondTab();
+		switchToSecondTab(driver);
+		
+		System.out.println("inside the apmaze request creation after switching tab");
 		
 		
+		click(apmazeRequestCreationLocators.requestDataElement);
+		
+		type(apmazeRequestCreationLocators.subjectElement,"This is Test APMAZE Request");
+		
+		type(apmazeRequestCreationLocators.summary,"Testing APMAZe please ignore");
+		
+		type(apmazeRequestCreationLocators.phoneNumber,"7973882171");
+		
+		type(apmazeRequestCreationLocators.partName,"Test Part");
+		
+	
 		
 		
 	}

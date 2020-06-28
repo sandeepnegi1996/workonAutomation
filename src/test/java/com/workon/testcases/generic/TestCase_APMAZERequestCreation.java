@@ -18,6 +18,7 @@ public class TestCase_APMAZERequestCreation {
 		Page.initConfiguration();
 	}
 
+	
 	@AfterClass
 	public void afterClass() {
 		System.out.println("*******  closing browser *********");
@@ -30,6 +31,8 @@ public class TestCase_APMAZERequestCreation {
 		SearchPage sp= dp.gotoSearchBox();
 		APMAZERequestCreation apmaze= sp.gotoAPMAZE();
 		apmaze.apmazeRequestCreation();
+		
+		Thread.sleep(6000);
 	
 	}
 

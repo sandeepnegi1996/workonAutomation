@@ -20,6 +20,9 @@ public class Page {
 	// initConfiguration
 	public static void initConfiguration() {
 
+		//currently we are passing the base url as the dashboard url for the Q
+		
+		
 		String baseURL = Constant.dashboardQUrl;
 
 		if (driver == null) {
@@ -72,7 +75,7 @@ public class Page {
 	
 
 	// any child class can use this function to switch to the new tab
-	public void switchToSecondTab() {
+	public void switchToSecondTab(WebDriver driver) {
 		
 		System.out.println("******  generating all the windows id ************");
 		Set<String> windowID=driver.getWindowHandles();
