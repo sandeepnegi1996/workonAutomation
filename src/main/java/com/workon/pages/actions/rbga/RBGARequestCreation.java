@@ -27,6 +27,8 @@ public class RBGARequestCreation extends Page {
 	
 	public void rbgaRequestCreation() {
 		
+		// This shifting to the next window we can put in the Central Page
+		
 		System.out.println("generating all the windows id means tab id");
 		Set<String> windowsID= driver.getWindowHandles();
 		
