@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -55,7 +56,10 @@ public class Page {
 	public static void quitBrowser() {
 
 		if (driver != null) {
+			
 			driver.quit();
+			driver=null;
+			
 		}
 	}
 
@@ -83,6 +87,15 @@ public class Page {
 		String firstWindow= itr.next();
 		String secondWindow=itr.next();		
 		driver.switchTo().window(secondWindow);
+		
+	}
+	
+	public void selectOption(WebElement element,String value) {
+		//here we are selecting by value
+		
+		Select select =new Select(element);
+		select.selectByValue(value);
+		
 		
 	}
 	

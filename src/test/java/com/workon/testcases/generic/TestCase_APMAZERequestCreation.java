@@ -19,11 +19,6 @@ public class TestCase_APMAZERequestCreation {
 	}
 
 	
-	@AfterClass
-	public void afterClass() {
-		System.out.println("*******  closing browser *********");
-		Page.quitBrowser();
-	}
 
 	@Test
 	public void apmazeRequestCreation() throws InterruptedException {
@@ -35,5 +30,12 @@ public class TestCase_APMAZERequestCreation {
 		Thread.sleep(6000);
 	
 	}
+	
+	@AfterClass
+	public void afterClass() {
+		System.out.println("*******  closing browser *********");
+		Page.quitBrowser();
+	}
+
 
 }
