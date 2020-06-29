@@ -8,7 +8,7 @@ import com.workon.base.Page;
 import com.workon.pages.actions.CentralSearchPage;
 import com.workon.pages.actions.DashboardPage;
 
-public class  {
+public class TestCase_CentralSearch {
   
 	
   @Test
