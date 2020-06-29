@@ -9,7 +9,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class TestUserLogin {
-  @Test
+	
+  @Test(invocationCount=6)
   public void testUserLogin() throws InterruptedException {
 	  DashboardPage dp=new DashboardPage();
 	  dp.gotoUserLogin();

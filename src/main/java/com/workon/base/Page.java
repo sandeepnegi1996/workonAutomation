@@ -24,7 +24,7 @@ public class Page {
 		//currently we are passing the base url as the dashboard url for the Q
 		
 		
-		String baseURL = Constant.dashboardQUrl;
+		String baseURL = Constant.dashboardPUrl;
 
 		if (driver == null) {
 
@@ -67,7 +67,7 @@ public class Page {
 
 	public void click(WebElement element) {
 		element.click();
-		System.out.println("clicked on the element ");
+		
 		
 	}
 

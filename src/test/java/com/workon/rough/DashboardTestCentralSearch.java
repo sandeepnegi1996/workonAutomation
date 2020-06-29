@@ -19,6 +19,7 @@ public class DashboardTestCentralSearch {
 	  
 	  DashboardPage dashboardpage=new DashboardPage();
 	  dashboardpage.gotoCentralSearch();
+	  
 	  Thread.sleep(5000);
 	  Page.quitBrowser();
   }

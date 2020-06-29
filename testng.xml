@@ -3,10 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-<!--       <class name="com.workon.rough.DashboardTestCentralSearch"/> -->
+<!--       <class name="com.workon.rough.DashboardTestCentralSearch"/> --><!-- 
        <class name="com.workon.testcases.generic.TestCase_RBGARequestCreation"/>
-        <class name="com.workon.testcases.generic.TestCase_APMAZERequestCreation"/>
-       
+        <class name="com.workon.testcases.generic.TestCase_APMAZERequestCreation"/> -->
+        <class name="com.workon.testcases.centralsearch.TestCase_CentralSearch"/>
+         <class name="com.workon.testcases.functional.bug.TestCase_Bug16794"/>       
+        
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
