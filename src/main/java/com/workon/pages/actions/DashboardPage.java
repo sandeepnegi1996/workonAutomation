@@ -1,8 +1,8 @@
 package com.workon.pages.actions;
 
-
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.testng.Assert;
 
 import com.workon.base.Page;
 import com.workon.pages.locators.DashboardPageLocators;
@@ -46,13 +46,15 @@ public class DashboardPage extends Page {
 		return new SearchPage();
 	}
 	
-	public void gotoCentralSearch() {
+	public CentralSearchPage gotoCentralSearch() {
 		
 		System.out.println("inside the gotoCentralSearch");
 		
 		click(dashboardpagelocator.centralSearchLink);
 		
 		System.out.println("clicked on the central search page links");
+		
+		return new CentralSearchPage();
 	}
 	
 	public void gotoWorkONArchive() {
@@ -87,6 +89,27 @@ public class DashboardPage extends Page {
 	public void gotoUserInformation() {
 		
 		
+	}
+	
+	//==================================================================
+	
+	public DashboardPage gotoUserLogin() throws InterruptedException {
+		click(dashboardpagelocator.userLogin);
+		
+		//check END1COB is available or not after the click
+		
+		
+		
+		String currentLoggedinUser= dashboardpagelocator.userdata.getText();
+		Assert.assertEquals(currentLoggedinUser, "END1COB");
+		
+		
+		System.out.println(currentLoggedinUser);		
+		//after that click on the close button
+		
+		
+		click(dashboardpagelocator.closeuserIcon);
+		return this;
 	}
 	
 	

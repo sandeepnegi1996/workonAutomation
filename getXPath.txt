@@ -44,7 +44,12 @@ the problem is we have 4 buttons like these it means we have to add some context
 
 
 
+===========================================================================================================
 
+1. CENTRAL SEARCH
+
+
+//span[contains(text(),'Try with New Dashboard UI for Cross Project Search')]//parent::div//following-sibling::a
 
 
 

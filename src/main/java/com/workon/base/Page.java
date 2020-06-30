@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -20,7 +21,10 @@ public class Page {
 	// initConfiguration
 	public static void initConfiguration() {
 
-		String baseURL = Constant.dashboardQUrl;
+		//currently we are passing the base url as the dashboard url for the Q
+		
+		
+		String baseURL = Constant.dashboardPUrl;
 
 		if (driver == null) {
 
@@ -52,7 +56,10 @@ public class Page {
 	public static void quitBrowser() {
 
 		if (driver != null) {
+			
 			driver.quit();
+			driver=null;
+			
 		}
 	}
 
@@ -60,7 +67,7 @@ public class Page {
 
 	public void click(WebElement element) {
 		element.click();
-		System.out.println("clicked on the element ");
+		
 		
 	}
 
@@ -72,7 +79,7 @@ public class Page {
 	
 
 	// any child class can use this function to switch to the new tab
-	public void switchToSecondTab() {
+	public void switchToSecondTab(WebDriver driver) {
 		
 		System.out.println("******  generating all the windows id ************");
 		Set<String> windowID=driver.getWindowHandles();
@@ -80,6 +87,15 @@ public class Page {
 		String firstWindow= itr.next();
 		String secondWindow=itr.next();		
 		driver.switchTo().window(secondWindow);
+		
+	}
+	
+	public void selectOption(WebElement element,String value) {
+		//here we are selecting by value
+		
+		Select select =new Select(element);
+		select.selectByValue(value);
+		
 		
 	}
 	

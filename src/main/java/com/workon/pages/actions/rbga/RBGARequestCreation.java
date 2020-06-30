@@ -27,7 +27,7 @@ public class RBGARequestCreation extends Page {
 	
 	public void rbgaRequestCreation() {
 
-		switchToSecondTab();
+		switchToSecondTab(driver);
 		
 		//clicking the tick mark
 		
