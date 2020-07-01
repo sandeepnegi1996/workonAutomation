@@ -16,24 +16,35 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Page {
 
 	public static WebDriver driver = null;
-	public static Actions action=null;
+	public static Actions action = null;
 
 	// initConfiguration
 	public static void initConfiguration() {
 
-		//currently we are passing the base url as the dashboard url for the Q
-		
-		
-		String baseURL = Constant.dashboardPUrl;
+		// currently we are passing the base url as the dashboard url for the Q
+
+		String baseURL = Constant.dashboardQUrl;
 
 		if (driver == null) {
 
 			if (Constant.chromeBrowser.equals("chrome")) {
 
 				// webdrivermanager
-				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+/*				WebDriverManager.chromedriver().setup();*/
 
+				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
+
+				/*WebDriverManager.chromedriver().arch64().proxy("rb-proxy-apac.bosch.com:8080").proxyUser("end1cob")
+						.proxyPass("S%40ndeep123456").setup();*/
+
+				/*WebDriverManager.chromedriver().driverVersion("83.0.4103.39").setup();
+				driver = new ChromeDriver();*/
+
+				
+				WebDriverManager.chromedriver().proxy("end1cob:S%40ndeep123456@rb-proxy-apac.bosch.com:8080").setup();
+				driver = new ChromeDriver();
+				
+				
 			}
 
 			else if (Constant.firefoxBrowser.equals("firefox")) {
@@ -45,7 +56,7 @@ public class Page {
 
 			driver.manage().window().maximize();
 			driver.get(baseURL);
-			action=new Actions(driver);
+			action = new Actions(driver);
 			System.out.println("webdriver object is initialized");
 
 		}
@@ -56,10 +67,10 @@ public class Page {
 	public static void quitBrowser() {
 
 		if (driver != null) {
-			
+
 			driver.quit();
-			driver=null;
-			
+			driver = null;
+
 		}
 	}
 
@@ -67,8 +78,7 @@ public class Page {
 
 	public void click(WebElement element) {
 		element.click();
-		
-		
+
 	}
 
 	// type
@@ -76,29 +86,25 @@ public class Page {
 	public void type(WebElement element, String inputString) {
 		element.sendKeys(inputString);
 	}
-	
 
 	// any child class can use this function to switch to the new tab
 	public void switchToSecondTab(WebDriver driver) {
-		
+
 		System.out.println("******  generating all the windows id ************");
-		Set<String> windowID=driver.getWindowHandles();
-		Iterator<String> itr= windowID.iterator();
-		String firstWindow= itr.next();
-		String secondWindow=itr.next();		
+		Set<String> windowID = driver.getWindowHandles();
+		Iterator<String> itr = windowID.iterator();
+		String firstWindow = itr.next();
+		String secondWindow = itr.next();
 		driver.switchTo().window(secondWindow);
-		
+
 	}
-	
-	public void selectOption(WebElement element,String value) {
-		//here we are selecting by value
-		
-		Select select =new Select(element);
+
+	public void selectOption(WebElement element, String value) {
+		// here we are selecting by value
+
+		Select select = new Select(element);
 		select.selectByValue(value);
-		
-		
+
 	}
-	
-	
 
 }
