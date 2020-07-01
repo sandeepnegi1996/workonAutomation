@@ -30,7 +30,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.1.0</version>
-			<scope>test</scope>
+			 <scope>compile</scope>
 		</dependency>
 
 
@@ -47,9 +47,6 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.14</version>
 		</dependency>
-
-
-
 
 
 
