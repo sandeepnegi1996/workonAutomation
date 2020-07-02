@@ -23,14 +23,14 @@ public class Page {
 
 		// currently we are passing the base url as the dashboard url for the Q
 
-		String baseURL = Constant.dashboardQUrl;
+		String baseURL = Constant.dashboardPUrl;
 
 		if (driver == null) {
 
 			if (Constant.chromeBrowser.equals("chrome")) {
 
 				// webdrivermanager
-/*				WebDriverManager.chromedriver().setup();*/
+				WebDriverManager.chromedriver().setup();
 
 				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
 
@@ -41,7 +41,10 @@ public class Page {
 				driver = new ChromeDriver();*/
 
 				
-				WebDriverManager.chromedriver().proxy("end1cob:S%40ndeep123456@rb-proxy-apac.bosch.com:8080").setup();
+				/*
+				 * WebDriverManager.chromedriver().proxy(
+				 * "end1cob:S%40ndeep123456@rb-proxy-apac.bosch.com:8080").setup();
+				 */
 				driver = new ChromeDriver();
 				
 				

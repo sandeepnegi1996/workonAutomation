@@ -36,7 +36,7 @@ public class TestCase_RBGARequestCreation {
 		SearchPage sp = dp.gotoSearchBox();
 		RBGARequestCreation rbga = sp.gotoRBGA();
 		rbga.rbgaRequestCreation();
-
+		
 		Thread.sleep(4000);
 
 	}
