@@ -24,7 +24,6 @@ public class DashboardPage extends Page {
 		//we want to initialize the elements of the dashboardpagelocatos so that why in the pagefactory init elements we have given the dashboadpagelocator 
 		PageFactory.initElements(factory, this.dashboardpagelocator);
 		
-		System.out.println("inside the dashboard page object of dashboardpagelocators is initialized");
 		
 		
 	}
@@ -94,6 +93,8 @@ public class DashboardPage extends Page {
 	//==================================================================
 	
 	public DashboardPage gotoUserLogin() throws InterruptedException {
+		
+		
 		click(dashboardpagelocator.userLogin);
 		
 		//check END1COB is available or not after the click
@@ -101,11 +102,15 @@ public class DashboardPage extends Page {
 		
 		
 		String currentLoggedinUser= dashboardpagelocator.userdata.getText();
+		
+	
+		
 		Assert.assertEquals(currentLoggedinUser, "END1COB");
 		
 		
-		System.out.println(currentLoggedinUser);		
+		System.out.println("Current Login User: "+currentLoggedinUser);		
 		//after that click on the close button
+		Thread.sleep(2000);
 		
 		
 		click(dashboardpagelocator.closeuserIcon);
