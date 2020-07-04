@@ -1,8 +1,10 @@
 package com.workon.testcases.generic;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -29,7 +31,7 @@ public class TestCase_RBGARequestCreation {
 		Page.quitBrowser();
 	}
 
-	@Test
+	@Test(invocationCount=6)
 	public void rbgaRequestCreation() throws InterruptedException {
 
 		DashboardPage dp = new DashboardPage();
@@ -37,7 +39,7 @@ public class TestCase_RBGARequestCreation {
 		RBGARequestCreation rbga = sp.gotoRBGA();
 		rbga.rbgaRequestCreation();
 		
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 
 	}
 

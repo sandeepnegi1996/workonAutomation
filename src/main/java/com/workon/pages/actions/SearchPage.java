@@ -37,7 +37,7 @@ public class SearchPage extends Page {
 		
 		
 		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		//returning the object of RBGARequestCreation page
 		
