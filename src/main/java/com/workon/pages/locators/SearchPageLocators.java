@@ -15,5 +15,6 @@ public class SearchPageLocators {
 	@FindBy(xpath="//a[@title='Request a new workflow for APMAZE']")
 	public WebElement apmazeNewRequest;
 	
-	
+	@FindBy(xpath="//a[@title='Request a new workflow for CP/ABx - Purchasing Approval Workflow']")
+	public WebElement rbubkpaNewRequest;
 }

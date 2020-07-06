@@ -31,7 +31,7 @@ public class TestCase_RBGARequestCreation {
 		Page.quitBrowser();
 	}
 
-	@Test(invocationCount=6)
+	@Test
 	public void rbgaRequestCreation() throws InterruptedException {
 
 		DashboardPage dp = new DashboardPage();

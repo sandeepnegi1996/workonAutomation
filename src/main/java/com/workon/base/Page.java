@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -16,13 +17,14 @@ public class Page {
 
 	public static WebDriver driver = null;
 	public static Actions action = null;
+	public static WebDriverWait wait=null;
 
 	// initConfiguration
 	public static void initConfiguration() {
 
 		// currently we are passing the base url as the dashboard url for the Q
 
-		String baseURL = Constant.dashboardPUrl;
+		String baseURL = Constant.dashboardQUrl;
 
 		if (driver == null) {
 

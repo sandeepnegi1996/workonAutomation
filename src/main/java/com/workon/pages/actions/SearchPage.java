@@ -8,6 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import com.workon.base.Page;
 import com.workon.pages.actions.apmaze.APMAZERequestCreation;
 import com.workon.pages.actions.rbga.RBGARequestCreation;
+import com.workon.pages.actions.rbubkpa.RBUBKPA_RequestCreation;
 import com.workon.pages.locators.SearchPageLocators;
 
 public class SearchPage extends Page {
@@ -72,14 +73,16 @@ public class SearchPage extends Page {
 
 	}
 
-	public void gotoRBUBKPA() throws InterruptedException {
+	public RBUBKPA_RequestCreation gotoRBUBKPA() throws InterruptedException {
 
 		type(searchpage.searchInput, "RBUBKPA");
 		System.out.println("RBUBKPA being searched");
+		
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
-		Thread.sleep(3000);
-
+		click(searchpage.rbubkpaNewRequest);
+	
+		return  new RBUBKPA_RequestCreation();
 	}
 
 	public void gotoSTGA() throws InterruptedException {
