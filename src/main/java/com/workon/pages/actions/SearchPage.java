@@ -57,7 +57,7 @@ public class SearchPage extends Page {
 		
 		click(searchpage.apmazeNewRequest);
 		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		
 		return new APMAZERequestCreation();
 

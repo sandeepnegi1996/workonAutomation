@@ -28,6 +28,13 @@ public class RBUBKPA_RequestCreation extends Page {
 
 	}
 
+	/*
+	 * This thing will only work in Q because of div selection and divs class in
+	 * different in P and Q and D
+	 */
+	
+	
+	
 	public void createRbubkpaRequest() throws InterruptedException {
 
 		switchToSecondTab(driver);
@@ -120,9 +127,9 @@ public class RBUBKPA_RequestCreation extends Page {
 
 			System.out.println(" ******   Deleting the existing Approvers in the list *******");
 
-			Thread.sleep(4000);
+			//Thread.sleep(4000);
 
-			switchToSecondTab(driver);
+			//switchToSecondTab(driver);
 
 		}
 
