@@ -43,6 +43,10 @@ the problem is we have 4 buttons like these it means we have to add some context
 
 
 
+//b[contains(text(),'Key:')]//parent::td//following-sibling::b
+
+
+
 
 ===========================================================================================================
 
@@ -297,6 +301,111 @@ driver.findElement(By.linkText("WorkON Profile)).click();
 
 
 
+
+
+
+================================================================================================================
+RBUBKPA
+
+1. subject
+
+//span[contains(text(),' Subject *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input[@type='text']
+
+
+2. Summary
+
+//label[contains(text(),'Summary')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+3. Responsible Buyer
+
+//label[contains(text(),'Responsible buyer identical with applicant?')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//table[@class='workonstdtable']//tbody//tr//td//input[@type='checkbox']
+
+
+4.Phone Number
+
+//label[contains(text(),'Phone *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+5.Buyers code
+
+//label[contains(text(),'Buyer Code*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+6. Group
+
+--> select any option
+
+
+//label[contains(text(),'Group*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+7. Purchsing approval type
+
+//label[contains(text(),'Purchasing Approval type*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+
+8. Material Group
+
+//label[contains(text(),'Material Group')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+9.Part number
+//label[contains(text(),'Part Number*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+
+10. plant specific vendor code
+
+//label[contains(text(),'Plant specific vendor Code*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+
+11. click on the workflow
+
+
+
+===================================================================================================================
+
+
+APGA
+
+
+1. Subject
+
+//label[contains(text(),'Subject')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+	
+
+2.Summary
+
+	
+//label[contains(text(),'Summary')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+
+1. Process *
+
+//span[contains(text(),'Process *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+
+2. Subprocess *
+
+//label[contains(text(),'Subprocess *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+3. Topic *
+
+
+//span[contains(text(),'Topic *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+4. Description Notes
+
+//label[contains(text(),'Description / Notes')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea
+
+
+5. List of Additional items
+ //div[@class='x-grid3-cell-inner x-grid3-col-deleteColumn']
 
 
 

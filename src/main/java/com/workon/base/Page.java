@@ -2,14 +2,14 @@ package com.workon.base;
 
 import java.util.Iterator;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,20 +17,25 @@ public class Page {
 
 	public static WebDriver driver = null;
 	public static Actions action = null;
+	public static WebDriverWait wait=null;
 
 	// initConfiguration
 	public static void initConfiguration() {
 
 		// currently we are passing the base url as the dashboard url for the Q
 
-		String baseURL = Constant.dashboardPUrl;
+		String baseURL = Constant.dashboardQUrl;
 
 		if (driver == null) {
 
-			if (Constant.chromeBrowser.equals("chrome")) {
+			if (Constant.browser.equals("chrome")) {
 
-				// webdrivermanager
-				WebDriverManager.chromedriver().setup();
+				
+				    WebDriverManager.chromedriver().setup();
+					 driver = new ChromeDriver(); 
+				 
+				
+					/* WebDriverManager.firefoxdriver().setup(); */
 
 				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
 
@@ -45,16 +50,33 @@ public class Page {
 				 * WebDriverManager.chromedriver().proxy(
 				 * "end1cob:S%40ndeep123456@rb-proxy-apac.bosch.com:8080").setup();
 				 */
-				driver = new ChromeDriver();
-				
+				/* driver = new ChromeDriver(); */
+				/*
+				 * driver=new FirefoxDriver();
+				 */
+				 
+				/*
+				 * System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
+				 * "\\src\\main\\resources\\executables\\geckodriver.exe");
+				 * 
+				 * driver = new FirefoxDriver();
+				 */
+
 				
 			}
 
-			else if (Constant.firefoxBrowser.equals("firefox")) {
+			else if (Constant.browser.equals("firefox")) {
 
-				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
-
+				/*
+				 * WebDriverManager.firefoxdriver().setup(); driver = new FirefoxDriver();
+				 */
+				
+				
+				  System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
+				  "\\src\\main\\resources\\executables\\geckodriver.exe");
+				  
+				  driver = new FirefoxDriver();
+				 
 			}
 
 			driver.manage().window().maximize();

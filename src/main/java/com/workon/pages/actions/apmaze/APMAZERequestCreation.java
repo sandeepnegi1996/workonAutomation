@@ -85,24 +85,21 @@ public class APMAZERequestCreation extends Page {
 		click(apmazeRequestCreationLocators.submitBtn);
 		
 		
+
+		System.out.println("**** Submitted the request  ****");
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 		
 	
+		
+		System.out.println("  ================  " +apmazeRequestCreationLocators.apmazekey.getText()+"  =================");
+
+		
+		
+		
+		
+		
+
 		
 		
 	}

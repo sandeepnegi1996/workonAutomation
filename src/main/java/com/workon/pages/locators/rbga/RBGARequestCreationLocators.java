@@ -39,4 +39,19 @@ public class RBGARequestCreationLocators {
 	public WebElement submitBtn;
 	
 	
+	
+	@FindBy(xpath="//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a")
+	public WebElement rbgaKey;
+	
+	//================================================================
+	
+	@FindBy(xpath="//div[@title='Close Feedback']//input[@value='x']")
+	public WebElement feedbackCloseBtn;
+	
+	@FindBy(xpath="//div[@id='btnFdBk']")
+	public WebElement feedbackbtn;
+	
+	
+	
+	
 }

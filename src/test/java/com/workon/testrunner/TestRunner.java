@@ -15,8 +15,6 @@ public class TestRunner {
 		
 		//testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class,TestCase_APMAZERequestCreation.class});
 		testng.setTestClasses(new Class[] {TestCase_Bug16794.class});
-		
-		
 		testng.run();
 	}
 

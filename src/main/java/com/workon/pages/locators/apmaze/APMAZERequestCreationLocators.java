@@ -79,6 +79,10 @@ public class APMAZERequestCreationLocators {
 	
 	
 	
+	@FindBy(xpath="//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a")
+	public WebElement apmazekey;
+	
+	
 	
 	
 	
