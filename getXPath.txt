@@ -367,6 +367,20 @@ RBUBKPA
 
 APGA
 
+
+1. Subject
+
+//label[contains(text(),'Subject')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+	
+
+2.Summary
+
+	
+//label[contains(text(),'Summary')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+
 1. Process *
 
 //span[contains(text(),'Process *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
@@ -395,7 +409,7 @@ APGA
 
 
 
- 
+
 
 
 

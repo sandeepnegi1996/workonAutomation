@@ -13,6 +13,25 @@
 				name="com.workon.testcases.generic.TestCase_APMAZERequestCreation" />
 		</classes>
 	</test>
+	
+	
+	
+	
+	
+		<test thread-count="1" name="rbubkpa_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_RBUBKPARequestCreation" />
+		</classes>
+	</test>
+	
+	
+		<test thread-count="1" name="stga_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_STGARequestCreation" />
+		</classes>
+	</test>
 
 	<!-- <test thread-count="1" name="Feedback_form_crosssign">
 		<classes>
@@ -25,20 +44,7 @@
 
 <!-- 
 	This thing will only work in Q because of div selection and divs class in different in P and Q and D -->
-<!-- 	<test thread-count="1" name="rbubkpa_request_creation">
-		<classes>
-			<class
-				name="com.workon.testcases.generic.TestCase_RBUBKPARequestCreation" />
-		</classes>
-	</test>
-	 -->
-	
-		<test thread-count="1" name="stga_request_creation">
-		<classes>
-			<class
-				name="com.workon.testcases.generic.TestCase_STGARequestCreation" />
-		</classes>
-	</test>
+
 
 
 

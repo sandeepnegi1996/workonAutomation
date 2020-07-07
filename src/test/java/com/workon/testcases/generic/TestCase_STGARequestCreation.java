@@ -22,6 +22,7 @@ public class TestCase_STGARequestCreation {
 	@AfterClass
 	public void afterClass() {
 		System.out.println("******    Closing browser     *********");
+		Page.quitBrowser();
 		
 	}
 
