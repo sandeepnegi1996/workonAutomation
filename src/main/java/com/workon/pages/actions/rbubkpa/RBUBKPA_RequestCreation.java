@@ -91,7 +91,7 @@ public class RBUBKPA_RequestCreation extends Page {
 		 * }
 		 */
 
-		int count = 0;
+	
 		
 		  for (WebElement element : rbubkpa.deleteApprovalBtn) {
 
@@ -108,12 +108,12 @@ public class RBUBKPA_RequestCreation extends Page {
 
 			String scriptSetAttr = "arguments[0].setAttribute(arguments[1],arguments[2])";
 
-			js.executeScript(scriptSetAttr, unselectableDiv2.get(count), "unselectable", "off");
+			js.executeScript(scriptSetAttr, unselectableDiv2.get(0), "unselectable", "off");
 
 			System.out.println(
-					" *****   check value of Div property " + unselectableDiv2.get(count).getAttribute("unselectable"));
+					" *****   check value of Div property " + unselectableDiv2.get(0).getAttribute("unselectable"));
 
-			// count++;
+			
 
 			click(rbubkpa.deleteApprovalBtn.get(0));
 

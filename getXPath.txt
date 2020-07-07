@@ -362,7 +362,40 @@ RBUBKPA
 
 
 
+===================================================================================================================
 
+
+APGA
+
+1. Process *
+
+//span[contains(text(),'Process *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+
+2. Subprocess *
+
+//label[contains(text(),'Subprocess *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+3. Topic *
+
+
+//span[contains(text(),'Topic *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+4. Description Notes
+
+//label[contains(text(),'Description / Notes')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea
+
+
+5. List of Additional items
+ //div[@class='x-grid3-cell-inner x-grid3-col-deleteColumn']
+
+
+
+ 
 
 
 
