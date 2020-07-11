@@ -1,6 +1,7 @@
 package com.workon.pages.actions.stga;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,6 +9,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.workon.base.Page;
 import com.workon.pages.locators.stga.STGARequestCreationLocators;
@@ -43,6 +46,9 @@ public class STGA_RequestCreation extends Page {
 		type(stga.topic, "This is the APGA Test Request");
 
 		type(stga.description, "Description APGA");
+		
+		System.out.println("filled the desciption notes");
+		
 
 		for (WebElement element : stga.deleteAdditionalFieldsBtn) {
 
@@ -59,8 +65,13 @@ public class STGA_RequestCreation extends Page {
 			System.out.println(
 					" *****   check value of Div property " + unselectableDiv.get(0).getAttribute("unselectable"));
 
+				
+			driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	
 			click(stga.deleteAdditionalFieldsBtn.get(0));
 
+			
+			
 			System.out.println("Delete button is clicked");
 			
 			
@@ -136,9 +147,14 @@ public class STGA_RequestCreation extends Page {
 			System.out.println("**** Submitted the request  ****");
 
 			System.out.println(" ***  Printing the request key after the request is submitted  ***");
+			
+			
+			
+			System.out.println();
 
 			System.out.println("  ================  " + stga.stgaKey.getText() + "  =================");
-
+			
+			System.out.println();
 		
 		
 		

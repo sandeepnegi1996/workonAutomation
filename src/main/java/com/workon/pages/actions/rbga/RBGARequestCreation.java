@@ -65,8 +65,10 @@ public class RBGARequestCreation extends Page {
 		
 	
 		
+		
+		System.out.println();
 		System.out.println("  ================  " +rbgaRequestLocator.rbgaKey.getText()+"  =================");
-
+		System.out.println();
 	}
 	
 

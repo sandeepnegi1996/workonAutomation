@@ -3,8 +3,12 @@ package com.workon.testrunner;
 import org.testng.TestNG;
 
 import com.workon.testcases.functional.bug.TestCase_Bug16794;
+import com.workon.testcases.generic.TestCase_AMLACTGLIBMAERequestCreation;
 import com.workon.testcases.generic.TestCase_APMAZERequestCreation;
+import com.workon.testcases.generic.TestCase_EMEAAVGRequestCreation;
 import com.workon.testcases.generic.TestCase_RBGARequestCreation;
+import com.workon.testcases.generic.TestCase_RBUBKPARequestCreation;
+import com.workon.testcases.generic.TestCase_STGARequestCreation;
 
 public class TestRunner {
 
@@ -14,8 +18,14 @@ public class TestRunner {
 		testng=new TestNG();
 		
 		//testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class,TestCase_APMAZERequestCreation.class});
-		testng.setTestClasses(new Class[] {TestCase_Bug16794.class});
+		testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class,
+				TestCase_APMAZERequestCreation.class,TestCase_RBUBKPARequestCreation.class,TestCase_STGARequestCreation.class,
+				TestCase_AMLACTGLIBMAERequestCreation.class,TestCase_EMEAAVGRequestCreation.class});
+		
+		
+	//	testng.setTestClasses(new Class[] {TestCase_STGARequestCreation.class});
+		
 		testng.run();
+	
 	}
-
 }

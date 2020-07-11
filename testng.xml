@@ -5,6 +5,10 @@
 	<test thread-count="1" name="rbga_request_creation"> <classes> <class 
 		name="com.workon.testcases.generic.TestCase_RBGARequestCreation" /> </classes> 
 		</test>
+		
+		
+		
+		
 
 	<test thread-count="1" name="apmaze_request_creation">
 		<classes>
@@ -26,20 +30,41 @@
 	</test>
 	
 	
+	
 		<test thread-count="1" name="stga_request_creation">
 		<classes>
 			<class
 				name="com.workon.testcases.generic.TestCase_STGARequestCreation" />
 		</classes>
 	</test>
-
-	<!-- <test thread-count="1" name="Feedback_form_crosssign">
+	
+	
+	
+	
+		<test thread-count="1" name="emeaavg_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_EMEAAVGRequestCreation" />
+		</classes>
+	</test>
+	
+	
+		<test thread-count="1" name="amlactglibmae_Request_Creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_AMLACTGLIBMAERequestCreation" />
+		</classes>
+	</test>
+	
+	
+<!-- 
+	<test thread-count="1" name="Feedback_form_crosssign">
 		<classes>
 			<class
 				name="com.workon.testcases.functional.pbi.TestCase_PBI_20258_Feedback" />
 		</classes>
-	</test> -->
-
+	</test>
+ -->
 
 
 <!-- 
