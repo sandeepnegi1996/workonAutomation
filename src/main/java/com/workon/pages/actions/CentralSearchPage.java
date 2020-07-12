@@ -30,5 +30,47 @@ public class CentralSearchPage extends Page {
 	}
 	
 	
+	//Click on the reset button
+	
+	public CentralSearchPage clickReset() {
+		click(centralpage.resetBtn);
+		return new CentralSearchPage();
+	}
+	
+	
+	//click on the next button
+	
+	public CentralSearchPage clickNextBtn() {
+		
+		click(centralpage.nextBtn);
+		return new CentralSearchPage();
+	}
+	
+	//click on the last button
+	
+	public CentralSearchPage clickLastBtn() {
+		
+		click(centralpage.lastBtn);
+		return new CentralSearchPage();
+	}
+	
+	//click on the sidebar toggle bosch
+	
+	public CentralSearchPage clickSideBarToggleSearch() {
+		
+		click(centralpage.sidebarToggleSearch);
+		return new CentralSearchPage();
+	}
+	
+	
+	//click quick filters
+	
+	public CentralSearchPage clickQuickFilter() {
+		click(centralpage.quickfilter);
+		return new CentralSearchPage();
+	}
+	
+	
+	
 
 }
