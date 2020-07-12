@@ -95,13 +95,14 @@ public class DashboardPage extends Page {
 
 		click(dashboardpagelocator.userLogin);
 
+		Thread.sleep(2000);
 		// check END1COB is available or not after the click
 
 		String currentLoggedinUser = dashboardpagelocator.userdata.getText();
 
 		// Assert.assertEquals(currentLoggedinUser, "END1COB");
 
-		System.out.println("Current Login User: " + currentLoggedinUser);
+		System.out.println(" *******    Current Login User: " + currentLoggedinUser  +"  *******");
 		// after that click on the close button
 		click(dashboardpagelocator.closeuserIcon);
 		Thread.sleep(2000);
@@ -114,7 +115,7 @@ public class DashboardPage extends Page {
 	public void gotoWorkflows() {
 
 		click(dashboardpagelocator.workflowTabDashboard);
-		System.out.println("clicked on the workflow tab");
+		System.out.println(" ****  clicked on the workflow tab  *****");
 
 	}
 
@@ -123,11 +124,13 @@ public class DashboardPage extends Page {
 	public void gotoMyFavTab() {
 
 		click(dashboardpagelocator.myfavtab);
-		System.out.println("clicked on the myfav tab");
+		System.out.println("  ******    clicked on the myfav tab  *****");
 
 	}
 
 	public void addItemsToFav() {
+		
+		System.out.println("***  Adding items in the Favorities Tab ******");
 
 		List<WebElement> favItems = dashboardpagelocator.starBtn;
 
@@ -147,6 +150,7 @@ public class DashboardPage extends Page {
 
 	public void removeItemsFromFav() {
 
+		System.out.println("*** Removing items from the favorites tab ****");
 		// List<WebElement> favItems = dashboardpagelocator.starBtn;
 		List<WebElement> removeItems = null;
 		boolean flag = true;

@@ -1,17 +1,19 @@
 package com.workon.base;
 
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+/*import io.github.bonigarcia.wdm.WebDriverManager;*/
 
 public class Page {
 
@@ -30,11 +32,36 @@ public class Page {
 
 			if (Constant.browser.equals("chrome")) {
 
-				
-				    WebDriverManager.chromedriver().setup();
-					 driver = new ChromeDriver(); 
 				 
+				/*
+				 * ChromeOptions chromeoptions=new ChromeOptions();
+				 * //chromeoptions.addArguments("--headless");
+				 * chromeoptions.addArguments("start-maximized");
+				 * 
+				 * chromeoptions.addArguments("disable-extensions");
+				 * 
+				 * chromeoptions.addArguments("--disable-popup-blocking");
+				 * 
+				 * chromeoptions.addArguments("--diable-infobars");
+				 */
 				
+				
+				System.out.println(System.getProperty("user.dir"));
+				
+				
+				
+				String chromedriverPath=System.getProperty("user.dir")+"\\src\\test\\resources\\executable\\chromedriver.exe";
+				
+				System.setProperty("webdriver.chrome.driver",chromedriverPath);
+				
+
+					
+				/* WebDriverManager.chromedriver().setup(); */
+				
+				
+					 driver = new ChromeDriver(); 
+				
+					 
 					/* WebDriverManager.firefoxdriver().setup(); */
 
 				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
@@ -87,6 +114,11 @@ public class Page {
 		}
 
 	}
+	
+	
+	
+	
+	
 
 	// quitBrowser
 	public static void quitBrowser() {

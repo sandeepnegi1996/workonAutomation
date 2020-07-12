@@ -18,6 +18,14 @@ public class SearchPageLocators {
 	@FindBy(xpath="//a[@title='Request a new workflow for CP/ABx - Purchasing Approval Workflow']")
 	public WebElement rbubkpaNewRequest;
 	
-	@FindBy(xpath="//a[@title=\"Request a new workflow for BT & SO General Approval\"]")
+	@FindBy(xpath="//a[@title='Request a new workflow for BT & SO General Approval']")
 	public WebElement stgaNewRequest;
+	
+	
+	@FindBy(xpath="//a[@title='Request a new workflow for EMEA Admin Rights for Server']")
+	public WebElement emeaavgNewRequest;
+
+
+	@FindBy(xpath="//a[@title='Request a new workflow for MAE Release']")
+	public WebElement amlactglibmaeNewRequest;
 }

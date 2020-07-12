@@ -12,9 +12,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class TestCase_Bug16794 {
-	 @Test(invocationCount=6)
+	 @Test(invocationCount=4)
 	  public void testUserLogin() throws InterruptedException {
 		  DashboardPage dp=new DashboardPage();
+		  
 		  
 		  dp.addItemsToFav();
 		  dp=dp.gotoUserLogin();

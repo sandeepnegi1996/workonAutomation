@@ -405,7 +405,230 @@ APGA
 
 
 5. List of Additional items
- //div[@class='x-grid3-cell-inner x-grid3-col-deleteColumn']
+ 
+//div[@class='x-grid3-cell-inner x-grid3-col-deleteColumn']
+
+
+6. Delete button
+
+//img[contains(@class,'DynamicGridControlButton_Delete')]
+
+
+
+
+
+
+========================================================================================================================================================
+
+1. EMEAAVG
+
+1. Reason for Admin Access
+
+//span[contains(text(),'Reason for Admin Access*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//textarea[contains(@class,'textarea')]
+
+
+
+
+2.System type*
+
+//span[contains(text(),'System type*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+3. Region*
+
+//span[contains(text(),'Region*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+4. Type of Request
+
+//span[contains(text(),'Type of Request*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+5. System Name
+
+//span[contains(text(),'System Name(s)*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+
+6. Domain\Account Name  Domain\Group Name*
+
+
+//span[contains(text(),'Domain\Account Name  Domain\Group Name*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+7. Click on the workflow tab
+
+8. Add approver in the department /manager cost as your name
+
+
+//div[contains(@class,'WorkOnCls-UserPicker-PickTrigger')]
+
+above mentioned will give the list of the add the approver button 
+
+just choose the first one and add the approver as ususla
+
+
+
+9. Clear the approval list --> choose the fourth one from the clearn approval button
+
+choose the fourth item from the list
+
+//button[contains(text(),'Clear approval list')]
+ 
+
+
+
+
+
+
+============================================================================================================================================================================
+AMLACTGLIBMAE
+============================================================================================================================================================================
+
+1.click on the first tab
+
+//li//a[contains(text(),'Informações Gerais')]
+
+
+
+2. choose the first dropdown tab
+
+//  choose this values -->  "CB - LAB EP"
+
+//span[contains(text(),'* Opções de fluxo')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+3. and 4 is dropdown which is alreadt filled
+
+
+//no thirst and fouth dropdown is required
+
+
+3. Plant  --> // "CaP1"
+
+//span[contains(text(),'* Planta')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+4. Diviison -->  // "ArP/ADM"
+//span[contains(text(),'* Planta')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+
+
+
+5. sector
+
+//span[contains(text(),'* Setor')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+6.Ramal
+
+//span[contains(text(),'* Ramal')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+7.Product
+
+//span[contains(text(),'* Produto')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+8. Emitnentt
+
+//span[contains(text(),'* Emitente')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+
+9.* Descrição
+
+//span[contains(text(),'* Descrição')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+10. fill first date
+
+//span[contains(text(),'* Previsão chegada MAE Bosch')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+11.Fill the second date
+//span[contains(text(),'* Previsão SOP Instalação MAE')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+12. Text area
+
+//span[contains(text(),'* Justificativa de ausência do COP')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//textarea
+
+
+
+13. Click on the workflow
+
+	@FindBy(xpath="//a[contains(text(),'Workflow')]")
+	public WebElement workflowTab;
+
+
+
+14//delete apprvers
+
+	@FindBy(xpath="//td//div//span//img[@class='ApprovalListGridControlButton_Delete']")
+	public List<WebElement> deleteApprovalBtn;
+	
+
+
+
+15 Add approver 
+@FindBy(xpath="//button[contains(text(),'Add an approver')]")
+	public  List<WebElement> approverBtn;
+	
+	
+	@FindBy(css="#NameFilterField")
+	public WebElement enterNtid;
+	
+	@FindBy(xpath="//div[contains(@class,'x-grid3-cell-inner x-grid3-col-name')]")
+	public WebElement selectNtid;
+	
+
+	@FindBy(css="#WorkOnSubmitButton")
+	public WebElement submitBtn;
+	
+	
+	
+
+
+16.submit
+
+@FindBy(xpath="//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a")
+	public WebElement rbubkpaKey;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
