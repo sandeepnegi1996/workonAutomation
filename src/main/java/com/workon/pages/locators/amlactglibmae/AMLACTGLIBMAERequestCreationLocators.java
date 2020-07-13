@@ -88,7 +88,4 @@ public class AMLACTGLIBMAERequestCreationLocators {
 
 //16.submit
 
-	@FindBy(xpath = "//b[contains(text(),'Chave:')]//parent::td//following-sibling::b//a")
-	public WebElement amlactKey;
-
 }

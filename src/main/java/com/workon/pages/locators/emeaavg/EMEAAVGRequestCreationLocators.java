@@ -72,11 +72,7 @@ public class EMEAAVGRequestCreationLocators {
 	@FindBy(css="#WorkOnSubmitButton")
 	public WebElement submitBtn;
 	
-	//get the key
-	
-	
-	@FindBy(xpath="//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a")
-	public WebElement emeaavgKey;
+
 	
 
 	

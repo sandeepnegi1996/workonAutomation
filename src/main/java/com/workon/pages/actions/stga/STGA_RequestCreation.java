@@ -151,11 +151,7 @@ public class STGA_RequestCreation extends Page {
 			
 			
 			
-			System.out.println();
-
-			System.out.println("  ================  " + stga.stgaKey.getText() + "  =================");
-			
-			System.out.println();
+		displayRequestKey();
 		
 		
 		

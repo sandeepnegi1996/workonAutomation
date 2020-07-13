@@ -72,9 +72,6 @@ public class RBUBKPARequestCreationLocators {
 	
 	
 	
-	@FindBy(xpath="//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a")
-	public WebElement rbubkpaKey;
-	
 	
 	
 }

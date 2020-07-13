@@ -23,13 +23,13 @@ public class TestRunner {
 		//Test cases for the generic Testing
 		
 		
-		/*
-		 * testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class,
-		 * TestCase_APMAZERequestCreation.class,TestCase_RBUBKPARequestCreation.class,
-		 * TestCase_STGARequestCreation.class,
-		 * TestCase_AMLACTGLIBMAERequestCreation.class,TestCase_EMEAAVGRequestCreation.
-		 * class});
-		 */
+		
+		  testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class,
+		  TestCase_APMAZERequestCreation.class,TestCase_RBUBKPARequestCreation.class,
+		  TestCase_STGARequestCreation.class,
+		  TestCase_AMLACTGLIBMAERequestCreation.class,TestCase_EMEAAVGRequestCreation.
+		  class});
+		 
 		
 	
 		
@@ -42,7 +42,7 @@ public class TestRunner {
 		
 		
 		
-		 testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class}); 
+		/* testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class}); */
 		 
 		
 		

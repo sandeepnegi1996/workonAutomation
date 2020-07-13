@@ -109,7 +109,8 @@ public class AMLACTGLIBMAERequestCreation extends Page {
 
 		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 
-		System.out.println("  ================  " + amlact.amlactKey.getText() + "  =================");
+		displayRequestKey();
+		
 
 	}
 

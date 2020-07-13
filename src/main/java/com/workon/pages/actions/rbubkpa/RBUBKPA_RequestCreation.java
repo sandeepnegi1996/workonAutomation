@@ -151,7 +151,7 @@ public class RBUBKPA_RequestCreation extends Page {
 
 		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 
-		System.out.println("  ================  " + rbubkpa.rbubkpaKey.getText() + "  =================");
+		displayRequestKey();
 
 	}
 
