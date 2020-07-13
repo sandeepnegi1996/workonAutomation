@@ -4,12 +4,14 @@ import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -147,7 +149,7 @@ public class Page {
 	// any child class can use this function to switch to the new tab
 	public void switchToSecondTab(WebDriver driver) {
 
-		System.out.println("******  generating all the windows id ************");
+		System.out.println("******  Switching to Second Tab  ************");
 		Set<String> windowID = driver.getWindowHandles();
 		Iterator<String> itr = windowID.iterator();
 		String firstWindow = itr.next();
@@ -155,6 +157,20 @@ public class Page {
 		driver.switchTo().window(secondWindow);
 
 	}
+	
+	
+	public void switchToThirdTab(WebDriver driver) {
+
+		System.out.println("******  Swtiching to third tab ************");
+		Set<String> windowID = driver.getWindowHandles();
+		Iterator<String> itr = windowID.iterator();
+		String firstWindow = itr.next();
+		String secondWindow = itr.next();
+		String thirdWindowId=itr.next();
+		driver.switchTo().window(thirdWindowId);
+
+	}
+
 
 	public void selectOption(WebElement element, String value) {
 		// here we are selecting by value
@@ -163,5 +179,32 @@ public class Page {
 		select.selectByValue(value);
 
 	}
+	
+	
+	
+	//approval Process
+	
+	
+	//clickOnWorkflowTab
+	
+	public void clickOnWorkflowTab() {
+		driver.findElement(By.xpath("//a[contains(text(),'Workflow')]")).click();
+	}
+	
+	
+	//display Request Key
+	public void displayRequestKey() {
+		
+		WebElement key=driver.findElement(By.xpath("//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a"));
+		System.out.println();
+		System.out.println("  ================  "  + key.getText() + "  =================");
+		System.out.println();
+		
+		
+		
+	}
+	
+	
+	
 
 }

@@ -36,12 +36,7 @@ public class EMEAAVGRequestCreationLocators {
 	@FindBy(xpath="//span[contains(text(),'Domain\\Account Name  Domain\\Group Name*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input")
     public WebElement domainAccountName;
 	
-	
-	//click on the workflow tab
-	
-	@FindBy(xpath="//a[contains(text(),'Workflow')]")
-	public WebElement workflowTab;
-	
+
 	
 	//add the department
 	

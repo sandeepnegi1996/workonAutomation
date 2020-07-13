@@ -84,7 +84,8 @@ public class STGA_RequestCreation extends Page {
 
 		}
 		
-		click(stga.workflowTab);
+		
+		clickOnWorkflowTab();
 		
 		
 		

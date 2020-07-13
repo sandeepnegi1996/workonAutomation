@@ -42,9 +42,9 @@ public class RBGARequestCreation extends Page {
 		// Fill the description
 		type(rbgaRequestLocator.description, "This is the description for the request RBGA");
 
-		// Click on the workflow tab
-		click(rbgaRequestLocator.workflowTab);
 
+		clickOnWorkflowTab();
+		
 		// fill the approver details
 		WebElement firstApproverBtn = rbgaRequestLocator.approverBtn.get(0);
 
@@ -66,9 +66,7 @@ public class RBGARequestCreation extends Page {
 	
 		
 		
-		System.out.println();
-		System.out.println("  ================  " +rbgaRequestLocator.rbgaKey.getText()+"  =================");
-		System.out.println();
+		displayRequestKey();
 	}
 	
 

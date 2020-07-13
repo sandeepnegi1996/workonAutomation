@@ -22,6 +22,7 @@ public class TestRunner {
 		
 		//Test cases for the generic Testing
 		
+		
 		/*
 		 * testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class,
 		 * TestCase_APMAZERequestCreation.class,TestCase_RBUBKPARequestCreation.class,
@@ -36,7 +37,15 @@ public class TestRunner {
 		//Testcases for the Central Search
 			
 		
-		testng.setTestClasses(new Class[] {TestCase_CentralSearch.class});
+		//testng.setTestClasses(new Class[] {TestCase_CentralSearch.class});
+		
+		
+		
+		
+		 testng.setTestClasses(new Class[] {TestCase_RBGARequestCreation.class}); 
+		 
+		
+		
 		testng.run();
 	
 		

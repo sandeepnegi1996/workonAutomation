@@ -72,7 +72,9 @@ public class APMAZERequestCreation extends Page {
 		
 		type(apmazeRequestCreationLocators.descriptionTextArea,"Test description input");
 		
-		click(apmazeRequestCreationLocators.workflow);
+
+		clickOnWorkflowTab();
+		
 		
 		click(apmazeRequestCreationLocators.editPosition);
 		

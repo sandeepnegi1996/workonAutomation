@@ -53,11 +53,6 @@ public class RBUBKPARequestCreationLocators {
 	
 	
 	
-	//workflow page
-	
-	@FindBy(xpath="//a[contains(text(),'Workflow')]")
-	public WebElement workflowTab;
-	
 	@FindBy(xpath="//td//div//span//img[@class='ApprovalListGridControlButton_Delete']")
 	public List<WebElement> deleteApprovalBtn;
 	

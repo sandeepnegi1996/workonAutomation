@@ -60,10 +60,7 @@ public class AMLACTGLIBMAERequestCreationLocators {
 	@FindBy(xpath = "//span[contains(text(),'* Justificativa de ausência do COP')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//textarea")
 	public WebElement textareaElement;
 
-	// 13. Click on the workflow
 
-	@FindBy(xpath = "//a[contains(text(),'Workflow')]")
-	public WebElement workflowTab;
 
 //14//delete apprvers
 	

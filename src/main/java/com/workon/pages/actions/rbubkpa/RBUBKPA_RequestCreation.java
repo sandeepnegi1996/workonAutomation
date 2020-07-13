@@ -61,9 +61,9 @@ public class RBUBKPA_RequestCreation extends Page {
 
 		type(rbubkpa.plantSpecificVendorCode, "123445");
 
-		// click on the workflow button
-
-		click(rbubkpa.workflowTab);
+	
+		clickOnWorkflowTab();
+		
 
 		/* List<WebElement> deleteApprovalList=new ArrayList<WebElement>(); */
 

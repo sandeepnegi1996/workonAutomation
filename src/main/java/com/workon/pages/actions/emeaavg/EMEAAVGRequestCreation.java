@@ -61,7 +61,7 @@ public class EMEAAVGRequestCreation extends Page {
 		type(emeaavg.domainAccountName,"test");
 		
 		
-		click(emeaavg.workflowTab);
+		clickOnWorkflowTab();
 		
 		
 		//add the department manager approval

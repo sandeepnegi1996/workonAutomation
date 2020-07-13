@@ -58,6 +58,31 @@ the problem is we have 4 buttons like these it means we have to add some context
 
 
 
+//Date filterss
+
+
+
+//span[contains(text(),'Date Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+//user filters
+
+
+//span[contains(text(),'User Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+//input[@type='checkbox']//following-sibling::span[contains(text(),'User Filters')]
+
+// Resolution
+//span[contains(text(),'Resolution & Status Filter')]//preceding-sibling::input[@type='checkbox']
+
+//Actions Taken
+
+//span[contains(text(),'Action Taken')]//preceding-sibling::input[@type='checkbox']
+=============================================================================================================
 
 
 
@@ -600,8 +625,66 @@ AMLACTGLIBMAE
 
 
 
+=====================
 
 
+
+
+
+
+
+
+1. CENTRAL SEARCH
+
+
+//span[contains(text(),'Try with New Dashboard UI for Cross Project Search')]//parent::div//following-sibling::a
+
+
+
+
+//Date filterss
+
+
+
+//span[contains(text(),'Date Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+//user filters
+
+
+//span[contains(text(),'User Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+//input[@type='checkbox']//following-sibling::span[contains(text(),'User Filters')]
+
+// Resolution
+//span[contains(text(),'Resolution & Status Filter')]//preceding-sibling::input[@type='checkbox']
+
+//Actions Taken
+
+//span[contains(text(),'Action Taken')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+
+
+//Choose the first item in the cental search  after searching for RBGA
+//get the request key and print the request key 
+//open the request in the new tab 
+// go to the new tab
+// verrifyt that the request is having the same key
+
+
+
+
+1. First Column 
+I will take the first key
+
+//div[@class='jqx-grid-cell-left-align']//a
 
 
 

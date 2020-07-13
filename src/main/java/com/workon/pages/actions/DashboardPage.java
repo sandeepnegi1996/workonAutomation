@@ -172,21 +172,12 @@ public class DashboardPage extends Page {
 				System.out.println("removing items from the Myfav tab");
 			}
 
-			/*
-			 * for (WebElement element : favItems) { click(element);
-			 * System.out.println("Adding items"); }
-			 */
 		}
-
-		/*
-		 * if (!favItems.isEmpty()) { // iterating through items and adding them
-		 * 
-		 * for(int i=0;i<2;i++) { click(favItems.get(i));
-		 * System.out.println("removing items from the Myfav tab"); }
-		 * 
-		 * } else { System.out.println("no items in the fav"); }
-		 */
-
 	}
+	
+	
+	
+	
+	
 
 }

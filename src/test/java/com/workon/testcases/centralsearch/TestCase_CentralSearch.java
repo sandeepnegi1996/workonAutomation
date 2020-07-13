@@ -19,8 +19,26 @@ public class TestCase_CentralSearch {
 	  
 	  DashboardPage dp=new DashboardPage();
 	  CentralSearchPage cp= dp.gotoCentralSearch();
-	  cp.gotoSearchRequest();
-	  Thread.sleep(4000);
+	  
+	  cp=cp.gotoSearchRequest();
+	  Thread.sleep(2000);
+	  
+	  cp.displayFirstRequestKey();
+	  Thread.sleep(2000);
+	
+	  cp.clickOntheFirstRequest();
+	  
+	  Thread.sleep(2000);
+	  
+	  cp.gotoRequestTab();
+	  
+	  Thread.sleep(3000);
+	  
+	  cp.compareRequestKey();
+	  
+	  Thread.sleep(2000);
+	  
+	 
 	  
 	  
   }
