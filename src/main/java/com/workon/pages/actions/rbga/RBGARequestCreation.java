@@ -27,49 +27,53 @@ public class RBGARequestCreation extends Page {
 
 	}
 
+	/*
+	 * RBGA REQUEST CREATION PROCESS
+	 * 1. switch to the new tab after clicking on the new request
+	 * 2. click on the checkbox element
+	 * 3. Fill the brief description since it is mandatory
+	 * 4. Fill the full description since it is mandatory
+	 * 5. Click on the workflow tab
+	 * 6. find the button for add approver since there are multiple I am trying to find the first one
+	 * 7. Add the approver by entering the ntid
+	 * 8. Click on the submit button
+	 * 9. Display Request Key
+	 * 
+	 */
+	
 	public void switchToRbgaRequestCreation() throws InterruptedException {
 		switchToSecondTab(driver);
 	}
 
-	// click checkbox Element
 
 	public void clickCheckBoxElement() {
 		click(rbgaRequestLocator.checkboxElement);
 
 	}
 
-	// type brief Description
 
 	public void typeBriefDescription() {
 		type(rbgaRequestLocator.briefDescriptionElement, "This is sample test Request Please ignore");
 
 	}
 
-	// Type Full Description
+
 
 	public void typeFullDescription() {
 		type(rbgaRequestLocator.descriptionElement, "This is the description for the request RBGA");
 
 	}
 
-	// click workflow
-	// from Page
-
-	// return firstApproverButton
-
 	public WebElement findFirstAddApproverBtn() {
 		return rbgaRequestLocator.approverBtn.get(0);
 
 	}
 
-	// click first Approver Button
 	public void clickfirstApproverButton() {
 		click(findFirstAddApproverBtn());
 
 	}
 
-	// Add an Approver
-	// addApprover
 	public RBGARequestCreation addApprover() {
 
 		type(rbgaRequestLocator.enterNtid, "end1cob");
@@ -79,17 +83,6 @@ public class RBGARequestCreation extends Page {
 		return this;
 	}
 
-	
-	// click on submit button
-
-	// display request
-	
-	
-	
-	
-	
-	
-	
 	
 	//Below Code is for Feedback
 	//need to put this code in Some Common class
