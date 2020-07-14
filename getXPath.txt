@@ -272,6 +272,7 @@ selectNTIDApmazeXPath=//td[contains(@class,'x-grid3-col x-grid3-cell x-grid3-td-
 
 RBGA
 
+
 // Brief Description
 
 
@@ -691,6 +692,28 @@ I will take the first key
 
 
 
+================================================================================================================
+
+WORKON_Dashboard
+
+@FindBy(xpath = "//span[contains(text(),'Try with New Dashboard UI for Cross Project Search')]//parent::div//following-sibling::a")
+	public WebElement centralSearchLink;
+	
+
+
+2. Workon archive link
+
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//parent::div//following-sibling::a
+
+// below will give me list of preciding sibling i just need to choose the last one 
+
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//preceding-sibling::a
+
+
+
+
+3.Shared Applications
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//preceding-sibling::a
 
 
 

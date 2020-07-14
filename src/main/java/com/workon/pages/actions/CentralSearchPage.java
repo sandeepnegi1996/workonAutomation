@@ -32,17 +32,17 @@ public class CentralSearchPage extends Page {
 
 	}
 
-	// Choose the first item in the cental search after searching for RBGA
-	// get the request key and print the request key
-	// open the request in the new tab
-	// go to the new tab
-	// verrifyt that the request is having the same key
+	/*
+	 * This is one of the most important testcase of central search
+	 * 
+	 * 1. Choose the first item in the cental search after searching for RBGA // get
+	 * 2. the request key and print the request key // open the request in the new
+	 * tab 3. go to the new tab // verrifyt that the request is having the same key
+	 */
 
 	public void displayFirstRequestKey() {
 		requestKey = centralpage.allRequests.get(0).getText();
-		
 		System.out.println("  ======================  " + requestKey + "  =========================");
-
 	}
 
 	public CentralSearchPage clickOntheFirstRequest() {
@@ -53,18 +53,21 @@ public class CentralSearchPage extends Page {
 
 	public void gotoRequestTab() {
 		switchToThirdTab(driver);
-		System.out.println(
-				"  ======================  " + centralpage.currentKey.getText() + "  =========================");
+	}
 
-		afterOpeningRequestKey = centralpage.currentKey.getText();
-
+	public void displayTheRequestKeyInNewTab() {
+		displayRequestKey();
+	}
+	
+	public void getRequestKeyAfterOpeningRequest() {
+		afterOpeningRequestKey = getRequestKey();
 	}
 
 	// comparing FirstRequestKey with the Request Opened
 
 	public void compareRequestKey() {
-		Assert.assertEquals(requestKey, afterOpeningRequestKey,"Request key is not same in the central search list");
-		}
+		Assert.assertEquals(requestKey, afterOpeningRequestKey, "Request key is not same in the central search list");
+	}
 
 	// Click on the reset button
 

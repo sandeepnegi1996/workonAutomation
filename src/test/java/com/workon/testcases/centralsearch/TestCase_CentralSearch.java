@@ -15,32 +15,21 @@ public class TestCase_CentralSearch {
   
 	
   @Test
-  public void searchCentralSearch() throws InterruptedException {
+  public void verifyTheRequestOpeningInNewTab() throws InterruptedException {
 	  
 	  DashboardPage dp=new DashboardPage();
 	  CentralSearchPage cp= dp.gotoCentralSearch();
 	  
 	  cp=cp.gotoSearchRequest();
-	  Thread.sleep(2000);
-	  
 	  cp.displayFirstRequestKey();
-	  Thread.sleep(2000);
 	
 	  cp.clickOntheFirstRequest();
 	  
-	  Thread.sleep(2000);
-	  
 	  cp.gotoRequestTab();
-	  
-	  Thread.sleep(3000);
-	  
+	  cp.displayTheRequestKeyInNewTab();
+	  cp.getRequestKeyAfterOpeningRequest();
 	  cp.compareRequestKey();
-	  
-	  Thread.sleep(2000);
-	  
-	 
-	  
-	  
+	  	  
   }
   
   @BeforeClass

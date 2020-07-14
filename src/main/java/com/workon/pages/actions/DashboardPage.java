@@ -57,11 +57,23 @@ public class DashboardPage extends Page {
 		return new CentralSearchPage();
 	}
 
-	public void gotoWorkONArchive() {
-
+	public ArchivePage gotoWorkONArchive() throws InterruptedException {
+		
+		//since the locator gives the list of element and we need the last element which is the anchor tag for workon archive
+		
+		click(dashboardpagelocator.archiveLink.get(dashboardpagelocator.archiveLink.size()-1));
+		Thread.sleep(3000);
+		return new ArchivePage();
+	
 	}
 
-	public void gotoUIB() {
+	public UIBPage gotoUIB() throws InterruptedException {
+		
+		
+		//span[contains(text(),'For edit/approve workflow requests you received')]//preceding-sibling::a
+		click(dashboardpagelocator.uib.get(dashboardpagelocator.uib.size()-1));
+		Thread.sleep(4000);
+		return new UIBPage();
 
 	}
 
@@ -69,9 +81,11 @@ public class DashboardPage extends Page {
 
 	}
 
-	public void gotoDevQualityCheckTool() {
-
-	}
+	/*
+	 * public void gotoDevQualityCheckTool() {
+	 * 
+	 * }
+	 */
 
 	public void gotoWorkONEndUserWiki() {
 

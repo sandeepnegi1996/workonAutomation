@@ -22,91 +22,60 @@ public class Page {
 
 	public static WebDriver driver = null;
 	public static Actions action = null;
-	public static WebDriverWait wait=null;
+	public static WebDriverWait wait = null;
 
 	// initConfiguration
 	public static void initConfiguration() {
 
 		// currently we are passing the base url as the dashboard url for the Q
 
-		String baseURL = Constant.dashboardQUrl;
+		String baseURL = Constant.dashboardPUrl;
 
 		if (driver == null) {
 
 			if (Constant.browser.equals("chrome")) {
 
-				 
-				/*
-				 * ChromeOptions chromeoptions=new ChromeOptions();
-				 * //chromeoptions.addArguments("--headless");
-				 * chromeoptions.addArguments("start-maximized");
-				 * 
-				 * chromeoptions.addArguments("disable-extensions");
-				 * 
-				 * chromeoptions.addArguments("--disable-popup-blocking");
-				 * 
-				 * chromeoptions.addArguments("--diable-infobars");
-				 */
-				
-				
-				System.out.println(System.getProperty("user.dir"));
-				
-				
-				
-				String chromedriverPath=System.getProperty("user.dir")+"\\src\\test\\resources\\executable\\chromedriver.exe";
-				
-				System.setProperty("webdriver.chrome.driver",chromedriverPath);
-				
+				ChromeOptions chromeoptions = new ChromeOptions();
+				// chromeoptions.addArguments("--headless");
+				chromeoptions.addArguments("start-maximized");
 
-					
+				chromeoptions.addArguments("disable-extensions");
+
+				chromeoptions.addArguments("--disable-popup-blocking");
+
+				chromeoptions.addArguments("--diable-infobars");
+
+				System.out.println(System.getProperty("user.dir"));
+
+				String chromedriverPath = System.getProperty("user.dir")
+						+ "\\src\\test\\resources\\executable\\chromedriver.exe";
+
+				System.setProperty("webdriver.chrome.driver", chromedriverPath);
+
 				/* WebDriverManager.chromedriver().setup(); */
-				
-				
-					 driver = new ChromeDriver(); 
-				
-					 
-					/* WebDriverManager.firefoxdriver().setup(); */
+
+				driver = new ChromeDriver();
 
 				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
 
-				/*WebDriverManager.chromedriver().arch64().proxy("rb-proxy-apac.bosch.com:8080").proxyUser("end1cob")
-						.proxyPass("S%40ndeep123456").setup();*/
-
-				/*WebDriverManager.chromedriver().driverVersion("83.0.4103.39").setup();
-				driver = new ChromeDriver();*/
-
-				
 				/*
-				 * WebDriverManager.chromedriver().proxy(
-				 * "end1cob:S%40ndeep123456@rb-proxy-apac.bosch.com:8080").setup();
-				 */
-				/* driver = new ChromeDriver(); */
-				/*
-				 * driver=new FirefoxDriver();
-				 */
-				 
-				/*
-				 * System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
-				 * "\\src\\main\\resources\\executables\\geckodriver.exe");
-				 * 
-				 * driver = new FirefoxDriver();
+				 * WebDriverManager.chromedriver().driverVersion("83.0.4103.39").setup(); driver
+				 * = new ChromeDriver();
 				 */
 
-				
 			}
 
 			else if (Constant.browser.equals("firefox")) {
 
-				/*
-				 * WebDriverManager.firefoxdriver().setup(); driver = new FirefoxDriver();
-				 */
-				
-				
-				  System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
-				  "\\src\\main\\resources\\executables\\geckodriver.exe");
-				  
-				  driver = new FirefoxDriver();
-				 
+				System.out.println(System.getProperty("user.dir"));
+
+				String firefoxdriverpath = System.getProperty("user.dir")
+						+ "\\src\\test\\resources\\executable\\geckodriver.exe";
+
+				System.setProperty("webdriver.gecko.driver", firefoxdriverpath);
+
+				driver = new FirefoxDriver();
+
 			}
 
 			driver.manage().window().maximize();
@@ -117,11 +86,6 @@ public class Page {
 		}
 
 	}
-	
-	
-	
-	
-	
 
 	// quitBrowser
 	public static void quitBrowser() {
@@ -158,8 +122,9 @@ public class Page {
 		driver.switchTo().window(secondWindow);
 
 	}
-	
-	
+
+	// use this function to switch to the third tab
+
 	public void switchToThirdTab(WebDriver driver) {
 
 		System.out.println("******  Swtiching to third tab ************");
@@ -167,12 +132,12 @@ public class Page {
 		Iterator<String> itr = windowID.iterator();
 		String firstWindow = itr.next();
 		String secondWindow = itr.next();
-		String thirdWindowId=itr.next();
+		String thirdWindowId = itr.next();
 		driver.switchTo().window(thirdWindowId);
 
 	}
 
-
+	// use to select an element by value
 	public void selectOption(WebElement element, String value) {
 		// here we are selecting by value
 
@@ -180,42 +145,37 @@ public class Page {
 		select.selectByValue(value);
 
 	}
-	
-	
-	
-	//approval Process
-	
-	
-	//clickOnWorkflowTab
-	
-	public  void clickOnWorkflowTab() {
+
+	// clickOnWorkflowTab
+
+	public void clickOnWorkflowTab() {
 		driver.findElement(By.xpath("//a[contains(text(),'Workflow')]")).click();
 	}
-	
-	
 
-	
-	
-	//display Request Key
-	public  void displayRequestKey() {
+	// display Request Key
+	// instead of display request key it should be getRequestKey
+	public void displayRequestKey() {
+
 		
-		WebElement key=driver.findElement(By.xpath("//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a"));
-		System.out.println();
-		System.out.println("  ================  "  + key.getText() + "  =================");
-		System.out.println();
 		
-	
+		System.out.println();
+		System.out.println("  ================  " + getRequestKey() + "  =================");
+		System.out.println();
+
 	}
-	
-	//click on submit button
-	public  void clickOnSubmitButton() {
+
+	// This function is redundant i will remove it later
+	//this will get the request key from the workon page
+	public String getRequestKey() {
+		return driver.findElement(By.xpath("//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a"))
+				.getText();
+
+	}
+
+	// click on submit button
+	public void clickOnSubmitButton() {
 		driver.findElement(By.cssSelector("#WorkOnSubmitButton")).click();
 		System.out.println("submitting the request");
 	}
-	
-	
-	
-	
-	
 
 }

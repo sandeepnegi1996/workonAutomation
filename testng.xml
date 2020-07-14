@@ -26,11 +26,58 @@
 		/> </classes> </test> -->
 
 
+
 	<!-- <test thread-count="5" name="login_issue_tests"> <classes> <class name="com.workon.testcases.functional.bug.TestCase_Bug16794"/> 
 		</classes> </test> -->
+
+
+
+
+
 	<!-- <test thread-count="1" name="Feedback_form_crosssign"> <classes> <class 
 		name="com.workon.testcases.functional.pbi.TestCase_PBI_20258_Feedback" /> 
 		</classes> </test> -->
+
+
+ <!-- Central Search  -->
+	<test thread-count="1" name="central_search">
+		<classes>
+			<class
+				name="com.workon.testcases.centralsearch.TestCase_CentralSearch" />
+		</classes>
+	</test>
+
+
+
+
+<!-- //TODO : Workon Archive -->
+<!-- 	<test thread-count="1" name="workon_archive">
+		<classes>
+			<class
+				name="com.workon.testcases.archive.TestCase_Archive" />
+		</classes>
+	</test> -->
+	
+	
+	<!-- //TODO : Workon UIB -->
+	<!-- <test thread-count="1" name="workon_uib">
+		<classes>
+			<class
+				name="com.workon.testcases.uib.TestCase_Uib" />
+		</classes>
+	</test>
+	 -->
+	
+	
+	
+	
+
+
+
+
+
+
+
 
 
 	<!-- This thing will only work in Q because of div selection and divs class 
