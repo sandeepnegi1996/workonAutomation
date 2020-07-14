@@ -88,12 +88,8 @@ public class EMEAAVGRequestCreation extends Page {
 
 		click(emeaavg.selectNtid);
 
-		// submit
-
-		click(emeaavg.submitBtn);
-
-		System.out.println("**** Submitted the request  ****");
-
+		clickOnSubmitButton();
+		
 		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 
 		displayRequestKey();

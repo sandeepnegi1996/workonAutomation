@@ -5,6 +5,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -187,22 +188,32 @@ public class Page {
 	
 	//clickOnWorkflowTab
 	
-	public void clickOnWorkflowTab() {
+	public  void clickOnWorkflowTab() {
 		driver.findElement(By.xpath("//a[contains(text(),'Workflow')]")).click();
 	}
 	
 	
+
+	
+	
 	//display Request Key
-	public void displayRequestKey() {
+	public  void displayRequestKey() {
 		
 		WebElement key=driver.findElement(By.xpath("//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a"));
 		System.out.println();
 		System.out.println("  ================  "  + key.getText() + "  =================");
 		System.out.println();
 		
-		
-		
+	
 	}
+	
+	//click on submit button
+	public  void clickOnSubmitButton() {
+		driver.findElement(By.cssSelector("#WorkOnSubmitButton")).click();
+		System.out.println("submitting the request");
+	}
+	
+	
 	
 	
 	

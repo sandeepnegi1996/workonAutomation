@@ -67,8 +67,6 @@ public class RBUBKPARequestCreationLocators {
 	public WebElement selectNtid;
 	
 
-	@FindBy(css="#WorkOnSubmitButton")
-	public WebElement submitBtn;
 	
 	
 	

@@ -68,10 +68,7 @@ public class EMEAAVGRequestCreationLocators {
 	public WebElement selectNtid;
 	
 
-	//submit
-	@FindBy(css="#WorkOnSubmitButton")
-	public WebElement submitBtn;
-	
+
 
 	
 

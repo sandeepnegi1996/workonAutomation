@@ -99,13 +99,11 @@ public class AMLACTGLIBMAERequestCreation extends Page {
 
 		type(amlact.enterNtid, "end1cob");
 		action.sendKeys(Keys.chord(Keys.ENTER)).perform();
+		
+		
+		clickOnSubmitButton();
+		
 
-		click(amlact.selectNtid);
-
-		// click on the submit button
-		click(amlact.submitBtn);
-
-		System.out.println("**** Submitted the request  ****");
 
 		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 

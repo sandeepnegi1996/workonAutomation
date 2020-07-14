@@ -37,9 +37,17 @@ public class TestCase_RBGARequestCreation {
 		DashboardPage dp = new DashboardPage();
 		SearchPage sp = dp.gotoSearchBox();
 		RBGARequestCreation rbga = sp.gotoRBGA();
-		rbga.rbgaRequestCreation();
+		rbga.switchToRbgaRequestCreation();
+		rbga.clickCheckBoxElement();
+		rbga.typeBriefDescription();
+		rbga.typeFullDescription();
+		rbga.clickOnWorkflowTab();
+		rbga.clickfirstApproverButton();
+		rbga.addApprover();
+		rbga.clickOnSubmitButton();
+		rbga.displayRequestKey();
 		
-		//Thread.sleep(4000);
+		Thread.sleep(4000);
 
 	}
 

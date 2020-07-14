@@ -144,10 +144,7 @@ public class RBUBKPA_RequestCreation extends Page {
 
 		click(rbubkpa.selectNtid);
 
-		// click on the submit button
-		click(rbubkpa.submitBtn);
-
-		System.out.println("**** Submitted the request  ****");
+		clickOnSubmitButton();
 
 		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 

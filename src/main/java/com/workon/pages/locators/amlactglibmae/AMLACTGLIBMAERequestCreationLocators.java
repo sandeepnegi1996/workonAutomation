@@ -83,8 +83,6 @@ public class AMLACTGLIBMAERequestCreationLocators {
 	@FindBy(xpath = "//div[contains(@class,'x-grid3-cell-inner x-grid3-col-name')]")
 	public WebElement selectNtid;
 
-	@FindBy(css = "#WorkOnSubmitButton")
-	public WebElement submitBtn;
 
 //16.submit
 

@@ -75,10 +75,9 @@ public class APMAZERequestCreation extends Page {
 		action.sendKeys(Keys.chord(Keys.ENTER)).perform();
 
 		click(apmazeRequestCreationLocators.selectNTIDApmazeXPath);
+		
+		clickOnSubmitButton();
 
-		click(apmazeRequestCreationLocators.submitBtn);
-
-		System.out.println("**** Submitted the request  ****");
 
 		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 

@@ -71,9 +71,7 @@ public class APMAZERequestCreationLocators {
 	
 	@FindBy(xpath="//td[contains(@class,'x-grid3-col x-grid3-cell x-grid3-td-name x-grid3-cell-first')]")
 	public WebElement selectNTIDApmazeXPath;
-	
-	@FindBy(css="#WorkOnSubmitButton")
-	public WebElement submitBtn;
+
 	
 	
 	

@@ -27,49 +27,74 @@ public class RBGARequestCreation extends Page {
 
 	}
 
-	public void rbgaRequestCreation() throws InterruptedException {
-
+	public void switchToRbgaRequestCreation() throws InterruptedException {
 		switchToSecondTab(driver);
+	}
 
-		// clicking the tick mark
+	// click checkbox Element
 
-		click(rbgaRequestLocator.tickMark);
+	public void clickCheckBoxElement() {
+		click(rbgaRequestLocator.checkboxElement);
 
-		// Fill the subject
+	}
 
-		type(rbgaRequestLocator.subject, "This is sample test Request Please ignore");
+	// type brief Description
 
-		// Fill the description
-		type(rbgaRequestLocator.description, "This is the description for the request RBGA");
+	public void typeBriefDescription() {
+		type(rbgaRequestLocator.briefDescriptionElement, "This is sample test Request Please ignore");
 
+	}
 
-		clickOnWorkflowTab();
-		
-		// fill the approver details
-		WebElement firstApproverBtn = rbgaRequestLocator.approverBtn.get(0);
+	// Type Full Description
 
-		click(firstApproverBtn);
+	public void typeFullDescription() {
+		type(rbgaRequestLocator.descriptionElement, "This is the description for the request RBGA");
 
-		// enter the ntid
+	}
+
+	// click workflow
+	// from Page
+
+	// return firstApproverButton
+
+	public WebElement findFirstAddApproverBtn() {
+		return rbgaRequestLocator.approverBtn.get(0);
+
+	}
+
+	// click first Approver Button
+	public void clickfirstApproverButton() {
+		click(findFirstAddApproverBtn());
+
+	}
+
+	// Add an Approver
+	// addApprover
+	public RBGARequestCreation addApprover() {
+
 		type(rbgaRequestLocator.enterNtid, "end1cob");
 		action.sendKeys(Keys.chord(Keys.ENTER)).perform();
-
 		click(rbgaRequestLocator.selectNtid);
 
-		// click on the submit button
-		click(rbgaRequestLocator.submitBtn);
-		
-		System.out.println("**** Submitted the request  ****");
-		
-		System.out.println(" ***  Printing the request key after the request is submitted  ***");
-		
-	
-		
-		
-		displayRequestKey();
+		return this;
 	}
-	
 
+	
+	// click on submit button
+
+	// display request
+	
+	
+	
+	
+	
+	
+	
+	
+	//Below Code is for Feedback
+	//need to put this code in Some Common class
+	
+	
 
 	public void gotoCloseFeedbackform() throws InterruptedException {
 
@@ -77,7 +102,7 @@ public class RBGARequestCreation extends Page {
 
 		// clicking the tick mark
 
-		click(rbgaRequestLocator.tickMark);
+		click(rbgaRequestLocator.checkboxElement);
 
 		boolean isActive = true;
 		try {
@@ -90,51 +115,50 @@ public class RBGARequestCreation extends Page {
 		}
 
 		if (isActive) {
-			//click(driver.findElement(By.xpath("//div[@title='Close Feedback']//input[@value='x']")));
-			
-			//if we have "X" then go inside and check inside also 
-			//whether "X" is present or not
-			
-			//open the feedback form
-			
+			// click(driver.findElement(By.xpath("//div[@title='Close
+			// Feedback']//input[@value='x']")));
+
+			// if we have "X" then go inside and check inside also
+			// whether "X" is present or not
+
+			// open the feedback form
+
 			click(rbgaRequestLocator.feedbackbtn);
 			System.out.println("======   Clicked on the feedback form =======");
-			
+
 			System.out.println("======    Waiting for some time ========");
 			Thread.sleep(3000);
-			
+
 			click(driver.findElement(By.xpath("//div[@id='closeFeedbackForm']//input[@value='x']")));
-			
+
 			System.out.println("====== Closing feedback form =======");
 		}
 
-		
 	}
-	
+
 	public void findFeedbackformPresence() throws InterruptedException {
-		
-		//this function will go and check the property for the "X"
-		//wher the element is present or not
-		
-		//how we will use this in our test case is like this
-		//open feedbackform close feedback form
+
+		// this function will go and check the property for the "X"
+		// wher the element is present or not
+
+		// how we will use this in our test case is like this
+		// open feedbackform close feedback form
 		//
-		
+
 		click(rbgaRequestLocator.feedbackCloseBtn);
-		
-		String checkingDisplayAttribute=rbgaRequestLocator.feedbackCloseBtn.getCssValue("display");
-		
-		if(checkingDisplayAttribute.equals("none")) {
+
+		String checkingDisplayAttribute = rbgaRequestLocator.feedbackCloseBtn.getCssValue("display");
+
+		if (checkingDisplayAttribute.equals("none")) {
 			System.out.println("======   form is closed properly   ========");
 		}
-		
-	
-		if(checkingDisplayAttribute.equals("block")) {
+
+		if (checkingDisplayAttribute.equals("block")) {
 			System.out.println("=======  form not closed    =============");
 		}
-		
+
 		Thread.sleep(3000);
-		
+
 	}
 
 }
