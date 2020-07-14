@@ -20,7 +20,7 @@ public class TestCase_CentralSearch {
 	  DashboardPage dp=new DashboardPage();
 	  CentralSearchPage cp= dp.gotoCentralSearch();
 	  
-	  cp=cp.gotoSearchRequest();
+	  cp=cp.gotoSearchRequest("RBGA");
 	  cp.displayFirstRequestKey();
 	
 	  cp.clickOntheFirstRequest();

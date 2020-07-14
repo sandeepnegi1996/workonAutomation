@@ -11,7 +11,7 @@ import com.workon.pages.locators.CentralSearchPageLocators;
 
 public class CentralSearchPage extends Page {
 
-	private String requestKey = "";
+	public String requestKey = "";
 	private String afterOpeningRequestKey = "";
 
 	public CentralSearchPageLocators centralpage;
@@ -23,10 +23,10 @@ public class CentralSearchPage extends Page {
 		PageFactory.initElements(factory, this.centralpage);
 	}
 
-	public CentralSearchPage gotoSearchRequest() {
+	public CentralSearchPage gotoSearchRequest(String requestKeySearchBox) {
 
 		switchToSecondTab(driver);
-		type(centralpage.textSearch, "RBGA");
+		type(centralpage.textSearch, requestKeySearchBox);
 		action.sendKeys(Keys.chord(Keys.ENTER)).perform();
 		return this;
 
