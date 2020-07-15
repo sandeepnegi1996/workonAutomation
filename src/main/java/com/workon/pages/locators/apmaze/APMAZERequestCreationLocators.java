@@ -62,8 +62,6 @@ public class APMAZERequestCreationLocators {
 	@FindBy(xpath="//label[contains(text(),'Description / Remarks')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']")
 	public WebElement descriptionTextArea;
 	
-	@FindBy(xpath="//a[contains(text(),'Workflow')]")
-	public WebElement workflow;
 	
 	@FindBy(xpath="//img[@class='ApprovalListGridControlButton_Edit']")
 	public WebElement editPosition;
@@ -73,10 +71,11 @@ public class APMAZERequestCreationLocators {
 	
 	@FindBy(xpath="//td[contains(@class,'x-grid3-col x-grid3-cell x-grid3-td-name x-grid3-cell-first')]")
 	public WebElement selectNTIDApmazeXPath;
+
 	
-	@FindBy(css="#WorkOnSubmitButton")
-	public WebElement submitBtn;
 	
+	
+
 	
 	
 	

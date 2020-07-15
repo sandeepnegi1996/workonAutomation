@@ -43,6 +43,10 @@ the problem is we have 4 buttons like these it means we have to add some context
 
 
 
+//b[contains(text(),'Key:')]//parent::td//following-sibling::b
+
+
+
 
 ===========================================================================================================
 
@@ -54,6 +58,31 @@ the problem is we have 4 buttons like these it means we have to add some context
 
 
 
+//Date filterss
+
+
+
+//span[contains(text(),'Date Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+//user filters
+
+
+//span[contains(text(),'User Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+//input[@type='checkbox']//following-sibling::span[contains(text(),'User Filters')]
+
+// Resolution
+//span[contains(text(),'Resolution & Status Filter')]//preceding-sibling::input[@type='checkbox']
+
+//Actions Taken
+
+//span[contains(text(),'Action Taken')]//preceding-sibling::input[@type='checkbox']
+=============================================================================================================
 
 
 
@@ -243,6 +272,7 @@ selectNTIDApmazeXPath=//td[contains(@class,'x-grid3-col x-grid3-cell x-grid3-td-
 
 RBGA
 
+
 // Brief Description
 
 
@@ -294,6 +324,414 @@ driver.findElement(By.linkText("WorkON Profile)).click();
  //ul[@id='tab_example_one']//li[3]
 
  //==========================================================
+
+
+
+
+
+
+================================================================================================================
+RBUBKPA
+
+1. subject
+
+//span[contains(text(),' Subject *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input[@type='text']
+
+
+2. Summary
+
+//label[contains(text(),'Summary')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+3. Responsible Buyer
+
+//label[contains(text(),'Responsible buyer identical with applicant?')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//table[@class='workonstdtable']//tbody//tr//td//input[@type='checkbox']
+
+
+4.Phone Number
+
+//label[contains(text(),'Phone *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+5.Buyers code
+
+//label[contains(text(),'Buyer Code*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+6. Group
+
+--> select any option
+
+
+//label[contains(text(),'Group*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+7. Purchsing approval type
+
+//label[contains(text(),'Purchasing Approval type*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+
+8. Material Group
+
+//label[contains(text(),'Material Group')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+9.Part number
+//label[contains(text(),'Part Number*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+
+10. plant specific vendor code
+
+//label[contains(text(),'Plant specific vendor Code*')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea[@class='textarea']
+
+
+11. click on the workflow
+
+
+
+===================================================================================================================
+
+
+APGA
+
+
+1. Subject
+
+//label[contains(text(),'Subject')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+	
+
+2.Summary
+
+	
+//label[contains(text(),'Summary')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//input[@type='text']
+
+
+
+
+1. Process *
+
+//span[contains(text(),'Process *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+
+2. Subprocess *
+
+//label[contains(text(),'Subprocess *')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//select
+
+
+3. Topic *
+
+
+//span[contains(text(),'Topic *')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+4. Description Notes
+
+//label[contains(text(),'Description / Notes')]//parent::div[@class='rb_WorkON_FieldContainer']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create ')]//textarea
+
+
+5. List of Additional items
+ 
+//div[@class='x-grid3-cell-inner x-grid3-col-deleteColumn']
+
+
+6. Delete button
+
+//img[contains(@class,'DynamicGridControlButton_Delete')]
+
+
+
+
+
+
+========================================================================================================================================================
+
+1. EMEAAVG
+
+1. Reason for Admin Access
+
+//span[contains(text(),'Reason for Admin Access*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//textarea[contains(@class,'textarea')]
+
+
+
+
+2.System type*
+
+//span[contains(text(),'System type*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+3. Region*
+
+//span[contains(text(),'Region*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+4. Type of Request
+
+//span[contains(text(),'Type of Request*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+5. System Name
+
+//span[contains(text(),'System Name(s)*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+
+6. Domain\Account Name  Domain\Group Name*
+
+
+//span[contains(text(),'Domain\Account Name  Domain\Group Name*')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+7. Click on the workflow tab
+
+8. Add approver in the department /manager cost as your name
+
+
+//div[contains(@class,'WorkOnCls-UserPicker-PickTrigger')]
+
+above mentioned will give the list of the add the approver button 
+
+just choose the first one and add the approver as ususla
+
+
+
+9. Clear the approval list --> choose the fourth one from the clearn approval button
+
+choose the fourth item from the list
+
+//button[contains(text(),'Clear approval list')]
+ 
+
+
+
+
+
+
+============================================================================================================================================================================
+AMLACTGLIBMAE
+============================================================================================================================================================================
+
+1.click on the first tab
+
+//li//a[contains(text(),'Informações Gerais')]
+
+
+
+2. choose the first dropdown tab
+
+//  choose this values -->  "CB - LAB EP"
+
+//span[contains(text(),'* Opções de fluxo')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+3. and 4 is dropdown which is alreadt filled
+
+
+//no thirst and fouth dropdown is required
+
+
+3. Plant  --> // "CaP1"
+
+//span[contains(text(),'* Planta')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+4. Diviison -->  // "ArP/ADM"
+//span[contains(text(),'* Planta')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//select
+
+
+
+
+
+
+5. sector
+
+//span[contains(text(),'* Setor')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+6.Ramal
+
+//span[contains(text(),'* Ramal')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+7.Product
+
+//span[contains(text(),'* Produto')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+8. Emitnentt
+
+//span[contains(text(),'* Emitente')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+
+9.* Descrição
+
+//span[contains(text(),'* Descrição')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+10. fill first date
+
+//span[contains(text(),'* Previsão chegada MAE Bosch')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+11.Fill the second date
+//span[contains(text(),'* Previsão SOP Instalação MAE')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//input
+
+
+12. Text area
+
+//span[contains(text(),'* Justificativa de ausência do COP')]//parent::label[@class='rb_WorkON_LabelArea']//following-sibling::div[contains(@class,'rb_WorkON_FieldValueArea rb_WorkON_FieldValueArea_create')]//textarea
+
+
+
+13. Click on the workflow
+
+	@FindBy(xpath="//a[contains(text(),'Workflow')]")
+	public WebElement workflowTab;
+
+
+
+14//delete apprvers
+
+	@FindBy(xpath="//td//div//span//img[@class='ApprovalListGridControlButton_Delete']")
+	public List<WebElement> deleteApprovalBtn;
+	
+
+
+
+15 Add approver 
+@FindBy(xpath="//button[contains(text(),'Add an approver')]")
+	public  List<WebElement> approverBtn;
+	
+	
+	@FindBy(css="#NameFilterField")
+	public WebElement enterNtid;
+	
+	@FindBy(xpath="//div[contains(@class,'x-grid3-cell-inner x-grid3-col-name')]")
+	public WebElement selectNtid;
+	
+
+	@FindBy(css="#WorkOnSubmitButton")
+	public WebElement submitBtn;
+	
+	
+	
+
+
+16.submit
+
+@FindBy(xpath="//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a")
+	public WebElement rbubkpaKey;
+
+
+
+=====================
+
+
+
+
+
+
+
+
+1. CENTRAL SEARCH
+
+
+//span[contains(text(),'Try with New Dashboard UI for Cross Project Search')]//parent::div//following-sibling::a
+
+
+
+
+//Date filterss
+
+
+
+//span[contains(text(),'Date Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+//user filters
+
+
+//span[contains(text(),'User Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+//input[@type='checkbox']//following-sibling::span[contains(text(),'User Filters')]
+
+// Resolution
+//span[contains(text(),'Resolution & Status Filter')]//preceding-sibling::input[@type='checkbox']
+
+//Actions Taken
+
+//span[contains(text(),'Action Taken')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+
+
+//Choose the first item in the cental search  after searching for RBGA
+//get the request key and print the request key 
+//open the request in the new tab 
+// go to the new tab
+// verrifyt that the request is having the same key
+
+
+
+
+1. First Column 
+I will take the first key
+
+//div[@class='jqx-grid-cell-left-align']//a
+
+
+
+
+
+
+================================================================================================================
+
+WORKON_Dashboard
+
+@FindBy(xpath = "//span[contains(text(),'Try with New Dashboard UI for Cross Project Search')]//parent::div//following-sibling::a")
+	public WebElement centralSearchLink;
+	
+
+
+2. Workon archive link
+
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//parent::div//following-sibling::a
+
+// below will give me list of preciding sibling i just need to choose the last one 
+
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//preceding-sibling::a
+
+
+
+
+3.Shared Applications
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//preceding-sibling::a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

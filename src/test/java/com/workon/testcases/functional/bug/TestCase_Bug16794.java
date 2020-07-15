@@ -1,5 +1,8 @@
 package com.workon.testcases.functional.bug;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.workon.base.Page;
@@ -9,16 +12,40 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class TestCase_Bug16794 {
-	 @Test(invocationCount=6)
+	 @Test(invocationCount=4)
 	  public void testUserLogin() throws InterruptedException {
 		  DashboardPage dp=new DashboardPage();
-		  dp.gotoUserLogin();
+		  
+		  
+		  dp.addItemsToFav();
+		  dp=dp.gotoUserLogin();
+		 
+		  
+		  dp.gotoWorkflows();
+		  
+		  
+		  dp.addItemsToFav();
+		  
+		  
+		  dp=dp.gotoUserLogin();
+		  
+		   dp.gotoMyFavTab();
+		  
+		  dp.removeItemsFromFav();
+		  
+		  
+		  dp=dp.gotoUserLogin();
+		  
+		  dp.gotoWorkflows();
+		  dp.addItemsToFav();
+		  
+		  
 		  Thread.sleep(3000);
 		  
 		  
 	  }
 	  @BeforeClass
-	  public void beforeClass() {
+	  public void beforeClass() throws InterruptedException {
 		  Page.initConfiguration();
 	  }
 

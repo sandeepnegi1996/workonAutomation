@@ -1,5 +1,8 @@
 package com.workon.rough;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.workon.base.Page;
@@ -19,7 +22,7 @@ public class TestUserLogin {
 	  
   }
   @BeforeClass
-  public void beforeClass() {
+  public void beforeClass() throws InterruptedException {
 	  Page.initConfiguration();
   }
 

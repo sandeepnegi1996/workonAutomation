@@ -1,44 +1,39 @@
 package com.workon.testcases.generic;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.workon.base.Page;
 import com.workon.pages.actions.DashboardPage;
 import com.workon.pages.actions.SearchPage;
-import com.workon.pages.actions.apmaze.APMAZERequestCreation;
+import com.workon.pages.actions.emeaavg.EMEAAVGRequestCreation;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
+public class TestCase_EMEAAVGRequestCreation {
 
-public class TestCase_APMAZERequestCreation {
 	
 	@BeforeClass
 	public void beforeClass() throws InterruptedException {
-		System.out.println("*******  initializing browser *********");
+		
 		Page.initConfiguration();
+		
 	}
-
 	
-
+	
 	@Test
-	public void apmazeRequestCreation() throws InterruptedException {
+	public void emeaavgRequestCreation() throws InterruptedException {
+		
 		DashboardPage dp=new DashboardPage();
 		SearchPage sp= dp.gotoSearchBox();
-		APMAZERequestCreation apmaze= sp.gotoAPMAZE();
-		apmaze.apmazeRequestCreation();
-		
-		Thread.sleep(6000);
+		EMEAAVGRequestCreation em= sp.gotoEMEAAVG();
+		em.createEMEAAVGRequest();
 	
 	}
+	
 	
 	@AfterClass
 	public void afterClass() {
-		System.out.println("*******  closing browser *********");
 		Page.quitBrowser();
+		
 	}
-
-
 }

@@ -1,6 +1,9 @@
 package com.workon.testcases.centralsearch;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -12,18 +15,25 @@ public class TestCase_CentralSearch {
   
 	
   @Test
-  public void searchCentralSearch() throws InterruptedException {
+  public void verifyTheRequestOpeningInNewTab() throws InterruptedException {
 	  
 	  DashboardPage dp=new DashboardPage();
 	  CentralSearchPage cp= dp.gotoCentralSearch();
-	  cp.gotoSearchRequest();
-	  Thread.sleep(4000);
 	  
+	  cp=cp.gotoSearchRequest("RBGA");
+	  cp.displayFirstRequestKey();
+	
+	  cp.clickOntheFirstRequest();
 	  
+	  cp.gotoRequestTab();
+	  cp.displayTheRequestKeyInNewTab();
+	  cp.getRequestKeyAfterOpeningRequest();
+	  cp.compareRequestKey();
+	  	  
   }
   
   @BeforeClass
-  public void beforeClass() {
+  public void beforeClass() throws InterruptedException {
 	  System.out.println(" ******  starting browser   ********");
 	  Page.initConfiguration();
   }
