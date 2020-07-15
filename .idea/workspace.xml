@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd1697b5-b60e-43b6-8a4e-2ea516bf9bc9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/base/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/base/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/amlactglibmae/AMLACTGLIBMAERequestCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/amlactglibmae/AMLACTGLIBMAERequestCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/apmaze/APMAZERequestCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/apmaze/APMAZERequestCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/emeaavg/EMEAAVGRequestCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/emeaavg/EMEAAVGRequestCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/rbga/RBGARequestCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/rbga/RBGARequestCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/rbubkpa/RBUBKPA_RequestCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/rbubkpa/RBUBKPA_RequestCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/stga/STGA_RequestCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/actions/stga/STGA_RequestCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/amlactglibmae/AMLACTGLIBMAERequestCreationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/amlactglibmae/AMLACTGLIBMAERequestCreationLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/apmaze/APMAZERequestCreationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/apmaze/APMAZERequestCreationLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/emeaavg/EMEAAVGRequestCreationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/emeaavg/EMEAAVGRequestCreationLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/rbga/RBGARequestCreationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/rbga/RBGARequestCreationLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/rbubkpa/RBUBKPARequestCreationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/rbubkpa/RBUBKPARequestCreationLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/stga/STGARequestCreationLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/workon/pages/locators/stga/STGARequestCreationLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/workon/testrunner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/workon/testrunner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1efF090ZBt0wYS1UqcguzzypQ7i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="C:/END1COB/Testing_WorkON/Automated_Test/WorkONTestAutomation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WorkONTestAutomation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/END1COB/Testing_WorkON/Automated_Test/WorkONTestAutomation/testng.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd1697b5-b60e-43b6-8a4e-2ea516bf9bc9" name="Default Changelist" comment="" />
+      <created>1594704514556</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594704514556</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2360" y="154" key="#Project_Structure" timestamp="1594706691062">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2360" y="154" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1594706691062" />
+    <state x="2334" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594704600772">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2334" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1594704600772" />
+    <state x="2659" y="321" key="FileChooserDialogImpl" timestamp="1594706408017">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2659" y="321" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1594706408017" />
+    <state x="2262" y="200" key="new project wizard" timestamp="1594706414986">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2262" y="200" key="new project wizard/0.0.1920.1040/1920.0.1920.1160@1920.0.1920.1160" timestamp="1594706414986" />
+  </component>
+</project>
