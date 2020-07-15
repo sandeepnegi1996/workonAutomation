@@ -84,7 +84,8 @@ public class STGA_RequestCreation extends Page {
 
 		}
 		
-		click(stga.workflowTab);
+		
+		clickOnWorkflowTab();
 		
 		
 		
@@ -141,20 +142,13 @@ public class STGA_RequestCreation extends Page {
 
 			click(stga.selectNtid);
 
-			// click on the submit button
-			click(stga.submitBtn);
-
-			System.out.println("**** Submitted the request  ****");
+			clickOnSubmitButton();
 
 			System.out.println(" ***  Printing the request key after the request is submitted  ***");
 			
 			
 			
-			System.out.println();
-
-			System.out.println("  ================  " + stga.stgaKey.getText() + "  =================");
-			
-			System.out.println();
+		displayRequestKey();
 		
 		
 		

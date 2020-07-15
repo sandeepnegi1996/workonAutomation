@@ -13,7 +13,7 @@ public class TestCase_STGARequestCreation {
 	
 	
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		System.out.println("******    opening browser      ********");
 		Page.initConfiguration();
 	}

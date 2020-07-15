@@ -61,9 +61,9 @@ public class RBUBKPA_RequestCreation extends Page {
 
 		type(rbubkpa.plantSpecificVendorCode, "123445");
 
-		// click on the workflow button
-
-		click(rbubkpa.workflowTab);
+	
+		clickOnWorkflowTab();
+		
 
 		/* List<WebElement> deleteApprovalList=new ArrayList<WebElement>(); */
 
@@ -144,14 +144,11 @@ public class RBUBKPA_RequestCreation extends Page {
 
 		click(rbubkpa.selectNtid);
 
-		// click on the submit button
-		click(rbubkpa.submitBtn);
-
-		System.out.println("**** Submitted the request  ****");
+		clickOnSubmitButton();
 
 		System.out.println(" ***  Printing the request key after the request is submitted  ***");
 
-		System.out.println("  ================  " + rbubkpa.rbubkpaKey.getText() + "  =================");
+		displayRequestKey();
 
 	}
 

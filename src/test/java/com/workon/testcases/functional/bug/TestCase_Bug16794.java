@@ -45,7 +45,7 @@ public class TestCase_Bug16794 {
 		  
 	  }
 	  @BeforeClass
-	  public void beforeClass() {
+	  public void beforeClass() throws InterruptedException {
 		  Page.initConfiguration();
 	  }
 

@@ -58,6 +58,31 @@ the problem is we have 4 buttons like these it means we have to add some context
 
 
 
+//Date filterss
+
+
+
+//span[contains(text(),'Date Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+//user filters
+
+
+//span[contains(text(),'User Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+//input[@type='checkbox']//following-sibling::span[contains(text(),'User Filters')]
+
+// Resolution
+//span[contains(text(),'Resolution & Status Filter')]//preceding-sibling::input[@type='checkbox']
+
+//Actions Taken
+
+//span[contains(text(),'Action Taken')]//preceding-sibling::input[@type='checkbox']
+=============================================================================================================
 
 
 
@@ -246,6 +271,7 @@ selectNTIDApmazeXPath=//td[contains(@class,'x-grid3-col x-grid3-cell x-grid3-td-
 ==============================================================================================
 
 RBGA
+
 
 // Brief Description
 
@@ -600,6 +626,7 @@ AMLACTGLIBMAE
 
 
 
+=====================
 
 
 
@@ -608,6 +635,85 @@ AMLACTGLIBMAE
 
 
 
+1. CENTRAL SEARCH
+
+
+//span[contains(text(),'Try with New Dashboard UI for Cross Project Search')]//parent::div//following-sibling::a
+
+
+
+
+//Date filterss
+
+
+
+//span[contains(text(),'Date Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+//user filters
+
+
+//span[contains(text(),'User Filters')]//preceding-sibling::input[@type='checkbox']
+
+
+
+//input[@type='checkbox']//following-sibling::span[contains(text(),'User Filters')]
+
+// Resolution
+//span[contains(text(),'Resolution & Status Filter')]//preceding-sibling::input[@type='checkbox']
+
+//Actions Taken
+
+//span[contains(text(),'Action Taken')]//preceding-sibling::input[@type='checkbox']
+
+
+
+
+
+
+//Choose the first item in the cental search  after searching for RBGA
+//get the request key and print the request key 
+//open the request in the new tab 
+// go to the new tab
+// verrifyt that the request is having the same key
+
+
+
+
+1. First Column 
+I will take the first key
+
+//div[@class='jqx-grid-cell-left-align']//a
+
+
+
+
+
+
+================================================================================================================
+
+WORKON_Dashboard
+
+@FindBy(xpath = "//span[contains(text(),'Try with New Dashboard UI for Cross Project Search')]//parent::div//following-sibling::a")
+	public WebElement centralSearchLink;
+	
+
+
+2. Workon archive link
+
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//parent::div//following-sibling::a
+
+// below will give me list of preciding sibling i just need to choose the last one 
+
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//preceding-sibling::a
+
+
+
+
+3.Shared Applications
+//span[contains(text(),'It stores all closed requests according to the archive definition chosen by the process owner.')]//preceding-sibling::a
 
 
 

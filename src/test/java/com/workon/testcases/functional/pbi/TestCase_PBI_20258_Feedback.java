@@ -19,7 +19,7 @@ public class TestCase_PBI_20258_Feedback {
 	 */
 	
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		Page.initConfiguration();
 
 	}

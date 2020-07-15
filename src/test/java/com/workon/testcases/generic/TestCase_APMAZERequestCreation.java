@@ -16,7 +16,7 @@ import org.testng.annotations.AfterClass;
 public class TestCase_APMAZERequestCreation {
 	
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		System.out.println("*******  initializing browser *********");
 		Page.initConfiguration();
 	}

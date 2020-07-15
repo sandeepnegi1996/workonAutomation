@@ -13,7 +13,7 @@ public class TestCase_RBUBKPARequestCreation {
 	
 	
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		System.out.println("*********  Initializing Browser  **********");
 		Page.initConfiguration();
 	}
