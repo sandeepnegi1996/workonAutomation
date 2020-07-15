@@ -13,7 +13,7 @@ public class TestCase_EMEAAVGRequestCreation {
 
 	
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		
 		Page.initConfiguration();
 		

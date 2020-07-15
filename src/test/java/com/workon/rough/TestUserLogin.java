@@ -22,7 +22,7 @@ public class TestUserLogin {
 	  
   }
   @BeforeClass
-  public void beforeClass() {
+  public void beforeClass() throws InterruptedException {
 	  Page.initConfiguration();
   }
 

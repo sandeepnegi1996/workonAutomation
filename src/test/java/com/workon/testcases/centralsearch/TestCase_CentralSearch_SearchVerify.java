@@ -18,6 +18,7 @@ public class TestCase_CentralSearch_SearchVerify {
 		  CentralSearchPage cp= dp.gotoCentralSearch();
 		  
 		  cp.gotoSearchRequest("RBGA");
+		  Thread.sleep(2000);
 		 cp.displayFirstRequestKey();
 		 
 		 //compare the Paased Key with the key returned by the displayFirstRequestKey
@@ -31,7 +32,7 @@ public class TestCase_CentralSearch_SearchVerify {
 	  }
 	  
 	  @BeforeClass
-	  public void beforeClass() {
+	  public void beforeClass() throws InterruptedException {
 		  System.out.println(" ******  starting browser   ********");
 		  Page.initConfiguration();
 	  }

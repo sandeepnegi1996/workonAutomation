@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,17 +26,27 @@ public class Page {
 	public static WebDriverWait wait = null;
 
 	// initConfiguration
-	public static void initConfiguration() {
+	public static void initConfiguration() throws InterruptedException {
 
 		// currently we are passing the base url as the dashboard url for the Q
 
-		String baseURL = Constant.dashboardPUrl;
+		String baseURL = Constant.dashboardQUrl;
 
 		if (driver == null) {
 
 			if (Constant.browser.equals("chrome")) {
 
+				/* WebDriverManager.chromedriver().setup(); */
+
+				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
+
+				String chromedriverPath = System.getProperty("user.dir")
+						+ "\\src\\test\\resources\\executable\\chromedriver.exe";
+
+				System.setProperty("webdriver.chrome.driver", chromedriverPath);
+				
 				ChromeOptions chromeoptions = new ChromeOptions();
+
 				// chromeoptions.addArguments("--headless");
 				chromeoptions.addArguments("start-maximized");
 
@@ -45,23 +56,7 @@ public class Page {
 
 				chromeoptions.addArguments("--diable-infobars");
 
-				System.out.println(System.getProperty("user.dir"));
-
-				String chromedriverPath = System.getProperty("user.dir")
-						+ "\\src\\test\\resources\\executable\\chromedriver.exe";
-
-				System.setProperty("webdriver.chrome.driver", chromedriverPath);
-
-				/* WebDriverManager.chromedriver().setup(); */
-
-				driver = new ChromeDriver();
-
-				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
-
-				/*
-				 * WebDriverManager.chromedriver().driverVersion("83.0.4103.39").setup(); driver
-				 * = new ChromeDriver();
-				 */
+				driver = new ChromeDriver(chromeoptions);
 
 			}
 
@@ -81,11 +76,64 @@ public class Page {
 			driver.manage().window().maximize();
 			driver.get(baseURL);
 			action = new Actions(driver);
-			System.out.println("webdriver object is initialized");
+			System.out.println(" webdriver object is initialized");
 
 		}
 
 	}
+
+	/*
+	 * // clear cache
+	 * 
+	 * public static void clearCache() throws InterruptedException {
+	 * 
+	 * String chromedriverPath = System.getProperty("user.dir") +
+	 * "\\src\\test\\resources\\executable\\chromedriver.exe";
+	 * 
+	 * System.setProperty("webdriver.chrome.driver", chromedriverPath);
+	 * ChromeOptions chromeoptions = new ChromeOptions();
+	 * 
+	 * 
+	 * // chromeoptions.addArguments("--headless");
+	 * chromeoptions.addArguments("start-maximized");
+	 * 
+	 * chromeoptions.addArguments("disable-extensions");
+	 * 
+	 * chromeoptions.addArguments("--disable-popup-blocking");
+	 * 
+	 * chromeoptions.addArguments("--diable-infobars");
+	 * 
+	 * driver = new ChromeDriver(chromeoptions);
+	 * 
+	 * driver.get("chrome://settings/clearBrowserData"); Thread.sleep(5000);
+	 * 
+	 * driver.switchTo().activeElement();
+	 * 
+	 * driver.findElement(By.cssSelector("* /deep/ #clearBrowsingDataConfirm")).
+	 * click();
+	 * 
+	 * Thread.sleep(5000);
+	 * 
+	 * }
+	 * 
+	 * 
+	 * 
+	 * //launch with cache disabled
+	 * 
+	 * @SuppressWarnings("deprecation") public static void launchWithoutCache() {
+	 * 
+	 * 
+	 * String chromedriverPath = System.getProperty("user.dir") +
+	 * "\\src\\test\\resources\\executable\\chromedriver.exe";
+	 * 
+	 * System.setProperty("webdriver.chrome.driver", chromedriverPath);
+	 * DesiredCapabilities cap=DesiredCapabilities.chrome();
+	 * cap.setCapability("applicationCacheEsnabled", false); driver=new
+	 * ChromeDriver(cap);
+	 * 
+	 * }
+	 * 
+	 */
 
 	// quitBrowser
 	public static void quitBrowser() {
@@ -156,8 +204,6 @@ public class Page {
 	// instead of display request key it should be getRequestKey
 	public void displayRequestKey() {
 
-		
-		
 		System.out.println();
 		System.out.println("  ================  " + getRequestKey() + "  =================");
 		System.out.println();
@@ -165,7 +211,7 @@ public class Page {
 	}
 
 	// This function is redundant i will remove it later
-	//this will get the request key from the workon page
+	// this will get the request key from the workon page
 	public String getRequestKey() {
 		return driver.findElement(By.xpath("//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a"))
 				.getText();

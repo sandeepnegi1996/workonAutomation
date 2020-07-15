@@ -1,5 +1,6 @@
 package com.workon.testcases.generic;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -21,7 +22,7 @@ import org.testng.annotations.AfterClass;
 public class TestCase_RBGARequestCreation {
 
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws InterruptedException {
 		Page.initConfiguration();
 
 	}
@@ -31,7 +32,7 @@ public class TestCase_RBGARequestCreation {
 		Page.quitBrowser();
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void rbgaRequestCreation() throws InterruptedException {
 
 		DashboardPage dp = new DashboardPage();
@@ -49,6 +50,17 @@ public class TestCase_RBGARequestCreation {
 		
 		Thread.sleep(4000);
 
+	}
+	
+	
+	@Test(priority = 2)
+	public void rbgaRequestApproval() {
+		
+		RBGARequestCreation rb=new RBGARequestCreation();
+		Assert.assertEquals(true,rb.isApproverButtonPresent());
+		rb.clickApproverButton();
+		
+		
 	}
 
 }

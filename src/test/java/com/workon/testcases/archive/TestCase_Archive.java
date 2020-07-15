@@ -22,7 +22,7 @@ public class TestCase_Archive {
 	  }
 	  
 	  @BeforeClass
-	  public void beforeClass() {
+	  public void beforeClass() throws InterruptedException {
 		  System.out.println(" ******  starting browser   ********");
 		  Page.initConfiguration();
 	  }

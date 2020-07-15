@@ -18,7 +18,7 @@ public class RBGARequestCreationLocators {
 	public WebElement descriptionElement;
 	
 	@FindBy(xpath = "//button[contains(text(),'Add an approver')]")
-	public List<WebElement> approverBtn;
+	public List<WebElement> AddApproverBtn;
 
 	@FindBy(css = "#NameFilterField")
 	public WebElement enterNtid;
@@ -26,6 +26,16 @@ public class RBGARequestCreationLocators {
 	@FindBy(xpath = "//div[contains(@class,'x-grid3-cell-inner x-grid3-col-name')]")
 	public WebElement selectNtid;
 
+	
+	
+	//=================================================================
+	
+	@FindBy(xpath="//a[contains(text(),'Approve')]")
+	public WebElement approverBtn;
+	
+	
+	
+	
 	// ================================================================
 
 	@FindBy(xpath = "//div[@title='Close Feedback']//input[@value='x']")
@@ -33,5 +43,9 @@ public class RBGARequestCreationLocators {
 
 	@FindBy(xpath = "//div[@id='btnFdBk']")
 	public WebElement feedbackbtn;
+
+	
+	
+	
 
 }

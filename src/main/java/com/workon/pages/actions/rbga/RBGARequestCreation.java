@@ -1,6 +1,7 @@
 package com.workon.pages.actions.rbga;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -65,7 +66,7 @@ public class RBGARequestCreation extends Page {
 	}
 
 	public WebElement findFirstAddApproverBtn() {
-		return rbgaRequestLocator.approverBtn.get(0);
+		return rbgaRequestLocator.AddApproverBtn.get(0);
 
 	}
 
@@ -83,6 +84,37 @@ public class RBGARequestCreation extends Page {
 		return this;
 	}
 
+	
+	
+	
+	
+	/*
+	 * Starting the Approval Process
+	 * 
+	 * 
+	 */
+	
+	
+	//Checking after request creation Approver Button Present or not
+	public boolean isApproverButtonPresent() {
+		List<WebElement> listOfWebElement= driver.findElements(By.xpath("//a[contains(text(),'Approve')]"));
+		
+		if(listOfWebElement.size()!=0) {
+			System.out.println(" *******   Approver Button Present  *********  ");
+			return true;
+		}
+		
+		System.out.println("********  Approver Button not Present  **********");
+		return false;
+	}
+	
+	//button displayed after request creation
+	public void clickApproverButton() {
+		click(rbgaRequestLocator.approverBtn);
+		System.out.println("****  Clicking on the Approver Button  *******");
+	}
+	
+	
 	
 	//Below Code is for Feedback
 	//need to put this code in Some Common class
