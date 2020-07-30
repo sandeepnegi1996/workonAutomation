@@ -1,23 +1,24 @@
 package com.workon.base;
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
-import java.util.Properties;
 import java.util.Set;
+import java.util.function.Function;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-/*import io.github.bonigarcia.wdm.WebDriverManager;*/
+import com.workon.utilities.loggers.*;
 
 public class Page {
 
@@ -25,10 +26,7 @@ public class Page {
 	public static Actions action = null;
 	public static WebDriverWait wait = null;
 
-	// initConfiguration
 	public static void initConfiguration() throws InterruptedException {
-
-		// currently we are passing the base url as the dashboard url for the Q
 
 		String baseURL = Constant.dashboardQUrl;
 
@@ -44,10 +42,8 @@ public class Page {
 						+ "\\src\\test\\resources\\executable\\chromedriver.exe";
 
 				System.setProperty("webdriver.chrome.driver", chromedriverPath);
-				
-				ChromeOptions chromeoptions = new ChromeOptions();
 
-				// chromeoptions.addArguments("--headless");
+				ChromeOptions chromeoptions = new ChromeOptions();
 				chromeoptions.addArguments("start-maximized");
 
 				chromeoptions.addArguments("disable-extensions");
@@ -76,64 +72,12 @@ public class Page {
 			driver.manage().window().maximize();
 			driver.get(baseURL);
 			action = new Actions(driver);
-			System.out.println(" webdriver object is initialized");
+
+			Log.info("webdriver is created");
 
 		}
 
 	}
-
-	/*
-	 * // clear cache
-	 * 
-	 * public static void clearCache() throws InterruptedException {
-	 * 
-	 * String chromedriverPath = System.getProperty("user.dir") +
-	 * "\\src\\test\\resources\\executable\\chromedriver.exe";
-	 * 
-	 * System.setProperty("webdriver.chrome.driver", chromedriverPath);
-	 * ChromeOptions chromeoptions = new ChromeOptions();
-	 * 
-	 * 
-	 * // chromeoptions.addArguments("--headless");
-	 * chromeoptions.addArguments("start-maximized");
-	 * 
-	 * chromeoptions.addArguments("disable-extensions");
-	 * 
-	 * chromeoptions.addArguments("--disable-popup-blocking");
-	 * 
-	 * chromeoptions.addArguments("--diable-infobars");
-	 * 
-	 * driver = new ChromeDriver(chromeoptions);
-	 * 
-	 * driver.get("chrome://settings/clearBrowserData"); Thread.sleep(5000);
-	 * 
-	 * driver.switchTo().activeElement();
-	 * 
-	 * driver.findElement(By.cssSelector("* /deep/ #clearBrowsingDataConfirm")).
-	 * click();
-	 * 
-	 * Thread.sleep(5000);
-	 * 
-	 * }
-	 * 
-	 * 
-	 * 
-	 * //launch with cache disabled
-	 * 
-	 * @SuppressWarnings("deprecation") public static void launchWithoutCache() {
-	 * 
-	 * 
-	 * String chromedriverPath = System.getProperty("user.dir") +
-	 * "\\src\\test\\resources\\executable\\chromedriver.exe";
-	 * 
-	 * System.setProperty("webdriver.chrome.driver", chromedriverPath);
-	 * DesiredCapabilities cap=DesiredCapabilities.chrome();
-	 * cap.setCapability("applicationCacheEsnabled", false); driver=new
-	 * ChromeDriver(cap);
-	 * 
-	 * }
-	 * 
-	 */
 
 	// quitBrowser
 	public static void quitBrowser() {
@@ -148,8 +92,9 @@ public class Page {
 
 	// click
 
-	public void click(WebElement element) {
+	public static void click(WebElement element) {
 		element.click();
+		Log.info("Clicked on the element:  "+element.toString());
 
 	}
 
@@ -157,6 +102,7 @@ public class Page {
 
 	public void type(WebElement element, String inputString) {
 		element.sendKeys(inputString);
+		Log.info("Typed on the element :  "+element.toString());
 	}
 
 	// any child class can use this function to switch to the new tab
@@ -204,10 +150,9 @@ public class Page {
 	// instead of display request key it should be getRequestKey
 	public void displayRequestKey() {
 
-		System.out.println();
-		System.out.println("  ================  " + getRequestKey() + "  =================");
-		System.out.println();
-
+		Log.info("=");
+		Log.info(getRequestKey());
+		Log.info("=");
 	}
 
 	// This function is redundant i will remove it later
@@ -220,8 +165,61 @@ public class Page {
 
 	// click on submit button
 	public void clickOnSubmitButton() {
-		driver.findElement(By.cssSelector("#WorkOnSubmitButton")).click();
-		System.out.println("submitting the request");
+
+		boolean isSubmitButtonPresent = isElementPresent(By.cssSelector("#WorkOnSubmitButton"));
+
+		if (isSubmitButtonPresent) {
+			driver.findElement(By.cssSelector("#WorkOnSubmitButton")).click();
+			Log.info("Request is Submitted");
+		}
+
 	}
+
+	// Is Element Present here I am using fluentWait to wait for sometime
+	//
+
+	public static boolean isElementPresent(final By by) {
+
+		FluentWait<WebDriver> fluentwait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
+				.pollingEvery(Duration.ofMillis(200)).ignoring(NoSuchElementException.class);
+
+		WebElement element = fluentwait.until(new Function<WebDriver, WebElement>() {
+
+			public WebElement apply(WebDriver t) {
+
+				return driver.findElement(by);
+			}
+
+		});
+
+		if (element != null) {
+			Log.info("Element is present :  "+by.toString());
+			return true;
+		}
+
+		return false;
+
+	}
+
+	/*
+	 * 
+	 * Get Element Text will check that the element is present or not and if the
+	 * element is present it will get the text for the element
+	 */
+
+	public static String getElementText(By by) {
+
+		boolean isStatus = isElementPresent(by);
+
+		if (isStatus) {
+			return driver.findElement(by).getText();
+		}
+
+		return "";
+	}
+
+
+
+
 
 }

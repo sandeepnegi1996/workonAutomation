@@ -722,13 +722,58 @@ WORKON_Dashboard
 
 
 
+=============================================================================================================================================================================
+
+1. Regression test cases
+
+1.  Save as Draft
+
+//input[@id='saveAsDraftButton']
 
 
 
 
+2. Submit
+
+//input[@id='WorkOnSubmitButton']
+
+
+3. Reset 
+
+//input[@id='cancelCreateButton']
+
+
+4.Applicant Name
+
+//b[contains(text(),'Applicant:')]//parent::td"
+
+
+4. Created Date
+
+//span[@id='creationDate']
+
+
+5.my most difficult xpaths
+
+//span[contains(text(),'Please enter the comments!')]//following-sibling::div//input//following-sibling::textarea
+
+
+6. Copy Button
 
 
 
+
+7. Print button
+
+//a[contains(text(),'Print')]
+
+
+7.Suspend Button
+//span[contains(text(),'Please enter the comments!')]//following-sibling::div//input//following-sibling::textarea
+
+8.Resume button
+
+//span[contains(text(),'Please enter a reason for resuming this request:')]//following-sibling::div//input//following-sibling::textarea
 
 
 

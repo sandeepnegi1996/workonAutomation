@@ -1,5 +1,6 @@
 package com.workon.pages.actions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -10,9 +11,12 @@ import com.workon.pages.actions.amlactglibmae.AMLACTGLIBMAERequestCreation;
 import com.workon.pages.actions.apmaze.APMAZERequestCreation;
 import com.workon.pages.actions.emeaavg.EMEAAVGRequestCreation;
 import com.workon.pages.actions.rbga.RBGARequestCreation;
+
 import com.workon.pages.actions.rbubkpa.RBUBKPA_RequestCreation;
+import com.workon.pages.actions.searchrequest.SearchRequestPage;
 import com.workon.pages.actions.stga.STGA_RequestCreation;
 import com.workon.pages.locators.SearchPageLocators;
+import com.workon.utilities.loggers.Log;
 
 public class SearchPage extends Page {
 
@@ -27,26 +31,37 @@ public class SearchPage extends Page {
 
 	}
 
+	// gotoRBGA --> for the new Request
 	public RBGARequestCreation gotoRBGA() throws InterruptedException {
 		type(searchpage.searchInput, "RBGA");
 
-		System.out.println("searching rbga in the search bar");
+		Log.info("Searching RBGA");
 
-		// this will press enter after searching
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
-		// click on the new request of the RBGA
-	
 		click(searchpage.rbgaNewRequest);
-		
-		
-		
-		//Thread.sleep(3000);
-		
-		//returning the object of RBGARequestCreation page
-		
+
+		Log.info("Returning the object of the RBGA request Creationn ");
 		return new RBGARequestCreation();
-		
+
+	}
+
+	// goto RBGA Search Request
+	public SearchRequestPage gotoSearchRequest(String applicationKey) {
+
+		type(searchpage.searchInput, applicationKey);
+
+		Log.info("Searching RBGA");
+
+		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
+
+		Log.info("clicking on the search request");
+
+		click(searchpage.rbgaSearchRequest);
+
+		Log.info("Returning the object of the RBGA request Creationn ");
+
+		return new SearchRequestPage();
 
 	}
 
@@ -56,12 +71,12 @@ public class SearchPage extends Page {
 		System.out.println("APMAZE being searched");
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
-		//after searching click on the new Request
-		
+		// after searching click on the new Request
+
 		click(searchpage.apmazeNewRequest);
-		
-		//Thread.sleep(3000);
-		
+
+		// Thread.sleep(3000);
+
 		return new APMAZERequestCreation();
 
 	}
@@ -72,8 +87,7 @@ public class SearchPage extends Page {
 		System.out.println("TRAVEL being searched");
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
-		
-		//click on the new Request
+		// click on the new Request
 		Thread.sleep(3000);
 
 	}
@@ -82,12 +96,12 @@ public class SearchPage extends Page {
 
 		type(searchpage.searchInput, "RBUBKPA");
 		System.out.println("RBUBKPA being searched");
-		
+
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
 		click(searchpage.rbubkpaNewRequest);
-	
-		return  new RBUBKPA_RequestCreation();
+
+		return new RBUBKPA_RequestCreation();
 	}
 
 	public STGA_RequestCreation gotoSTGA() throws InterruptedException {
@@ -97,12 +111,11 @@ public class SearchPage extends Page {
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
 		click(searchpage.stgaNewRequest);
-		
+
 		return new STGA_RequestCreation();
 
 	}
-	
-	
+
 	public EMEAAVGRequestCreation gotoEMEAAVG() throws InterruptedException {
 
 		type(searchpage.searchInput, "EMEAAVG");
@@ -110,41 +123,30 @@ public class SearchPage extends Page {
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
 		click(searchpage.emeaavgNewRequest);
-		
+
 		return new EMEAAVGRequestCreation();
 
 	}
+
 	public void gotoAPGA() throws InterruptedException {
 
 		type(searchpage.searchInput, "APGA");
 		System.out.println("APGA being searched");
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
-		
-		
-		
-
-
-		
 
 	}
-	
+
 	public AMLACTGLIBMAERequestCreation gotoAMLACTGLIBMAE() throws InterruptedException {
 
 		type(searchpage.searchInput, "AMLACTGLIBMAE");
 		System.out.println("AMLACTGLIBMAE being searched");
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
 
-		//clicking on the new Request for AMLACTGLIBMAE
+		// clicking on the new Request for AMLACTGLIBMAE
 		click(searchpage.amlactglibmaeNewRequest);
-		
+
 		return new AMLACTGLIBMAERequestCreation();
-	
 
 	}
-	
-	
-	
-	
-	
 
 }

@@ -44,23 +44,23 @@ public class TestCase_RBGARequestCreation {
 		rbga.typeFullDescription();
 		rbga.clickOnWorkflowTab();
 		rbga.clickfirstApproverButton();
-		rbga.addApprover();
+		rbga.addApprover("end1cob");
 		rbga.clickOnSubmitButton();
 		rbga.displayRequestKey();
-		
 		Thread.sleep(4000);
 
 	}
 	
 	
-	@Test(priority = 2)
-	public void rbgaRequestApproval() {
-		
-		RBGARequestCreation rb=new RBGARequestCreation();
-		Assert.assertEquals(true,rb.isApproverButtonPresent());
-		rb.clickApproverButton();
-		
-		
-	}
+	/*
+	 * @Test(priority = 2) public void rbgaRequestApproval() {
+	 * 
+	 * RBGARequestCreation rb=new RBGARequestCreation();
+	 * Assert.assertEquals(true,rb.isApproverButtonPresent());
+	 * rb.clickApproverButton();
+	 * 
+	 * 
+	 * }
+	 */
 
 }

@@ -25,6 +25,8 @@ public class RBGARequestCreationLocators {
 
 	@FindBy(xpath = "//div[contains(@class,'x-grid3-cell-inner x-grid3-col-name')]")
 	public WebElement selectNtid;
+	
+	
 
 	
 	

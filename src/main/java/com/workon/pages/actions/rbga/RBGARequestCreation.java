@@ -75,14 +75,16 @@ public class RBGARequestCreation extends Page {
 
 	}
 
-	public RBGARequestCreation addApprover() {
+	public RBGARequestCreation addApprover(String ntid) {
 
-		type(rbgaRequestLocator.enterNtid, "end1cob");
+		type(rbgaRequestLocator.enterNtid, ntid);
 		action.sendKeys(Keys.chord(Keys.ENTER)).perform();
 		click(rbgaRequestLocator.selectNtid);
 
 		return this;
 	}
+
+	
 
 	
 	
