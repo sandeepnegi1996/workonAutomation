@@ -28,11 +28,11 @@ public class Page {
 
 	public static void initConfiguration() throws InterruptedException {
 
-		String baseURL = Constant.dashboardQUrl;
+		String baseURL = Constant.DASHBOARD_Q_URL;
 
 		if (driver == null) {
 
-			if (Constant.browser.equals("chrome")) {
+			if (Constant.BROWSER_NAME.equals("chrome")) {
 
 				/* WebDriverManager.chromedriver().setup(); */
 
@@ -56,7 +56,7 @@ public class Page {
 
 			}
 
-			else if (Constant.browser.equals("firefox")) {
+			else if (Constant.BROWSER_NAME.equals("firefox")) {
 
 				System.out.println(System.getProperty("user.dir"));
 
