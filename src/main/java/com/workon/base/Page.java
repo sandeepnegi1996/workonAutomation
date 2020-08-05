@@ -34,9 +34,6 @@ public class Page {
 
 			if (Constant.BROWSER_NAME.equals("chrome")) {
 
-				/* WebDriverManager.chromedriver().setup(); */
-
-				// WebDriverManager.chromedriver().proxy("rb-proxy-apac.bosch.com").proxyUser("end1cob").proxyPass("S@ndep123456").setup();
 
 				String chromedriverPath = System.getProperty("user.dir")
 						+ "\\src\\test\\resources\\executable\\chromedriver.exe";
@@ -58,8 +55,8 @@ public class Page {
 
 			else if (Constant.BROWSER_NAME.equals("firefox")) {
 
-				System.out.println(System.getProperty("user.dir"));
-
+				Log.info(System.getProperty("user.dir"));
+				
 				String firefoxdriverpath = System.getProperty("user.dir")
 						+ "\\src\\test\\resources\\executable\\geckodriver.exe";
 
