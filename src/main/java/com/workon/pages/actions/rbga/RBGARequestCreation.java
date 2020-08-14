@@ -43,7 +43,8 @@ public class RBGARequestCreation extends Page {
 	 */
 	
 	public void switchToRbgaRequestCreation() throws InterruptedException {
-		switchToSecondTab(driver);
+		//switchToSecondTab(driver);
+		switchToAnyTab(driver,2);
 	}
 
 

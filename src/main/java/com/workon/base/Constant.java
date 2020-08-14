@@ -2,10 +2,10 @@ package com.workon.base;
 
 public class Constant {
 	
-	public static final String dashboardPUrl="https://rb-wam.bosch.com/WorkOnDashBoard/search/search.seam";
-	public static final String dashboardQUrl="https://rb-wam-q.bosch.com/WorkOnDashBoard/search/search.seam";
-	public static final String dashboardDUrl="";
-	public static final String browser="chrome";
-	public static final int waitingTimeConstant=15;
+	public static final String DASHBOARD_P_URL="https://rb-wam.bosch.com/WorkOnDashBoard/search/search.seam";
+	public static final String DASHBOARD_Q_URL="https://rb-wam-q.bosch.com/WorkOnDashBoard/search/search.seam";
+	public static final String DASHBOARD_D_URL="";
+	public static final String BROWSER_NAME="chrome";
+	public static final int WAITING_TIME_CONSTANT=15;
 
 }

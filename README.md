@@ -6,3 +6,5 @@
 1. Working hard first for finishing the testcases for the workon RBGA later we will be doing the same 
 thing for the other servers
 
+2. I will fix the STGA and AMLACTGLIBMAE application and get some other application in place of that
+3. Also needs to fix the Delete Draft request and the Forward Draft request.
