@@ -9,3 +9,10 @@ thing for the other servers
 2. I will fix the STGA and AMLACTGLIBMAE application and get some other application in place of that
 3. Also needs to fix the Delete Draft request and the Forward Draft request.
 4. Testing multiple push
+
+
+##### Tasks 
+- [X] APGA Automation
+- [X] AP8D Automaiton
+- [ ] Delete Draft Request Automation
+- [ ] Forward Draft Request Automaiotn
