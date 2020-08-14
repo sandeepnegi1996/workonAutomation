@@ -2,44 +2,91 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
+
+<!-- AP8D is for AP Q1 -->  
+
+
+<!-- APMAZE is for AP Q2   -->
+<!-- 	<test thread-count="1" name="apmaze_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_APMAZERequestCreation" />
+		</classes>
+	</test>
+	 -->
+	
+	
+	<!--  RBUBKPA for : AP Q3 -->
+<!-- 	
+	<test thread-count="1" name="rbubkpa_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_RBUBKPARequestCreation" />
+		</classes>
+	</test> -->
+	
+	
+	
+	<!-- STGA : EMEA Q1   -->
+	
+<!-- 	<test thread-count="1" name="stga_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_STGARequestCreation" />
+		</classes>
+	</test> -->
+	
+	<!--  RBGA is for EMEA Q2 -->
+<!-- 
 	<test thread-count="1" name="rbga_request_creation">
 		<classes>
 			<class
 				name="com.workon.testcases.generic.TestCase_RBGARequestCreation" />
 		</classes>
 	</test>
-
-
-	<test thread-count="1" name="apmaze_request_creation">
-		<classes>
-			<class
-				name="com.workon.testcases.generic.TestCase_APMAZERequestCreation" />
-		</classes>
-	</test>
-	<test thread-count="1" name="rbubkpa_request_creation">
-		<classes>
-			<class
-				name="com.workon.testcases.generic.TestCase_RBUBKPARequestCreation" />
-		</classes>
-	</test>
-	<test thread-count="1" name="stga_request_creation">
-		<classes>
-			<class
-				name="com.workon.testcases.generic.TestCase_STGARequestCreation" />
-		</classes>
-	</test>
-	<test thread-count="1" name="emeaavg_request_creation">
+	 -->
+	
+	
+	<!--  EMEAAVG :  EMEA Q3-->
+	
+<!-- 	<test thread-count="1" name="emeaavg_request_creation">
 		<classes>
 			<class
 				name="com.workon.testcases.generic.TestCase_EMEAAVGRequestCreation" />
 		</classes>
+	</test> -->
+	
+	
+	
+	
+	<!--APGA-11136 :  EMEA Q4  -->
+	
+	
+	
+	
+	
+	
+	<!--  AM : AMLACSALTPRECOLANC-15  -->
+	<!-- TestCase_AMLACSALTPRECOLANCRequestCreation -->
+	
+	<test thread-count="1" name="TestCase_AMLACSALTPRECOLANCRequestCreation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_AMLACSALTPRECOLANCRequestCreation" />
+		</classes>
 	</test>
-	<test thread-count="1" name="amlactglibmae_Request_Creation">
+	
+	
+	
+	
+	
+	<!--  Remove the AMLACTFLIBMAE -->
+<!-- 	<test thread-count="1" name="amlactglibmae_Request_Creation">
 		<classes>
 			<class
 				name="com.workon.testcases.generic.TestCase_AMLACTGLIBMAERequestCreation" />
 		</classes>
-	</test>
+	</test> -->
 
 
 
@@ -64,7 +111,7 @@
 
 
 <!-- 	Regression test cases -->
-
+<!-- 
 	<test thread-count="1" name="workon_regression">
 		<classes>
 			<class
@@ -101,7 +148,7 @@
 
 
 
-
+ -->
 	<!-- //TODO : Workon Archive -->
 	<!-- <test thread-count="1" name="workon_archive"> <classes> <class name="com.workon.testcases.archive.TestCase_Archive" 
 		/> </classes> </test> -->

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import com.workon.base.Page;
+import com.workon.pages.actions.amlacsaltrecolann.AMLACSALTRECOLANNRequestCreation;
 import com.workon.pages.actions.amlactglibmae.AMLACTGLIBMAERequestCreation;
 import com.workon.pages.actions.apmaze.APMAZERequestCreation;
 import com.workon.pages.actions.emeaavg.EMEAAVGRequestCreation;
@@ -148,5 +149,29 @@ public class SearchPage extends Page {
 		return new AMLACTGLIBMAERequestCreation();
 
 	}
+	
+	//These are the new changes
+	
+	public AMLACSALTRECOLANNRequestCreation gotoAMLACSALTRECOLANN() {
+		//not able to search with the full name
+		
+		type(searchpage.searchInput, "AMLAC");
+
+		Log.info("Searching AMLACSALTRECOLANN");
+
+		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
+
+		click(searchpage.amlacsaltrecolan);
+
+		Log.info("Returning the object of the AMLACSALTRECOLAN request Creationn ");
+		
+		
+		return new AMLACSALTRECOLANNRequestCreation();
+		
+	}
+	
+	
+	
+	
 
 }

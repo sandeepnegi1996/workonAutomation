@@ -39,6 +39,10 @@ public class SearchPageLocators {
 	public WebElement amlactglibmaeNewRequest;
 	
 	
+	@FindBy(xpath="//a[contains(@title,'Request a new workflow for AA - Amendment Pricing / Release Notice')]")
+	public WebElement amlacsaltrecolan;
+	
+	
 	
 	
 	
