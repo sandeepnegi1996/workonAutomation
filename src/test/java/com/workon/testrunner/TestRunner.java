@@ -3,7 +3,6 @@ package com.workon.testrunner;
 import org.testng.TestNG;
 
 import com.workon.testcases.centralsearch.TestCase_CentralSearch;
-import com.workon.testcases.functional.bug.TestCase_Bug16794;
 import com.workon.testcases.generic.TestCase_AMLACTGLIBMAERequestCreation;
 import com.workon.testcases.generic.TestCase_APMAZERequestCreation;
 import com.workon.testcases.generic.TestCase_EMEAAVGRequestCreation;
@@ -22,7 +21,7 @@ public class TestRunner {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		testng = new TestNG();
+		//testng = new TestNG();
 
 		// Test cases for the generic Testing
 
@@ -35,8 +34,8 @@ public class TestRunner {
 		 * TestCase_STGARequestCreation.class,
 		 * TestCase_AMLACTGLIBMAERequestCreation.class,
 		 * TestCase_EMEAAVGRequestCreation.class });
-		 * 
 		 */
+		 
 		// Testcases for the Central Search
 
 		// testng.setTestClasses(new Class[] {TestCase_CentralSearch.class});
@@ -67,11 +66,12 @@ public class TestRunner {
 		 
 		 
 		 
-		 testng.setTestClasses(new Class[] {TestCase_SuspendRequest.class}); 
+			/* testng.setTestClasses(new Class[] {TestCase_SuspendRequest.class}); */
 		 
-		 
-
-		testng.run();
-
+			
+			
+			
+			//  testng.run();
+			 
 	}
 }

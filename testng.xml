@@ -2,31 +2,50 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-	<!-- <test thread-count="1" name="rbga_request_creation"> <classes> <class 
-		name="com.workon.testcases.generic.TestCase_RBGARequestCreation" /> </classes> 
-		</test> -->
+	<test thread-count="1" name="rbga_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_RBGARequestCreation" />
+		</classes>
+	</test>
 
 
-
-
-
-	<!-- <test thread-count="1" name="apmaze_request_creation"> <classes> <class 
-		name="com.workon.testcases.generic.TestCase_APMAZERequestCreation" /> </classes> 
-		</test> <test thread-count="1" name="rbubkpa_request_creation"> <classes> 
-		<class name="com.workon.testcases.generic.TestCase_RBUBKPARequestCreation" 
-		/> </classes> </test> <test thread-count="1" name="stga_request_creation"> 
-		<classes> <class name="com.workon.testcases.generic.TestCase_STGARequestCreation" 
-		/> </classes> </test> <test thread-count="1" name="emeaavg_request_creation"> 
-		<classes> <class name="com.workon.testcases.generic.TestCase_EMEAAVGRequestCreation" 
-		/> </classes> </test> <test thread-count="1" name="amlactglibmae_Request_Creation"> 
-		<classes> <class name="com.workon.testcases.generic.TestCase_AMLACTGLIBMAERequestCreation" 
-		/> </classes> </test> -->
+	<test thread-count="1" name="apmaze_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_APMAZERequestCreation" />
+		</classes>
+	</test>
+	<test thread-count="1" name="rbubkpa_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_RBUBKPARequestCreation" />
+		</classes>
+	</test>
+	<test thread-count="1" name="stga_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_STGARequestCreation" />
+		</classes>
+	</test>
+	<test thread-count="1" name="emeaavg_request_creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_EMEAAVGRequestCreation" />
+		</classes>
+	</test>
+	<test thread-count="1" name="amlactglibmae_Request_Creation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_AMLACTGLIBMAERequestCreation" />
+		</classes>
+	</test>
 
 
 
 	<!-- <test thread-count="5" name="login_issue_tests"> <classes> <class name="com.workon.testcases.functional.bug.TestCase_Bug16794"/> 
-		</classes> </test> -->
-
+		</classes> </test>
+ -->
 
 
 
@@ -44,37 +63,37 @@
 
 
 
-	<!-- Regression test cases -->
+<!-- 	Regression test cases -->
 
 	<test thread-count="1" name="workon_regression">
 		<classes>
-			<!-- <class
+			<class
 				name="com.workon.testcases.regression.TestCase_SaveAsDraft" />
- -->
 
-<!-- 			<class
+
+			<class
 				name="com.workon.testcases.regression.TestCase_DeleteAsDraft" />
 
 
 			<class
 				name="com.workon.testcases.regression.TestCase_CopyRequest" />
-				
-				
-				<class
+
+
+			<class
 				name="com.workon.testcases.regression.TestCase_PrintRequest" />
-				
-				-->
-				
-				
-			<!-- 		<class
+
+
+
+
+			<class
 				name="com.workon.testcases.regression.TestCase_SuspendRequest" />
-				
-				
-			 -->
-				
-				<class
+
+
+
+
+			<class
 				name="com.workon.testcases.regression.TestCase_ForwardRequest" />
-				
+
 		</classes>
 	</test>
 
@@ -132,4 +151,4 @@
 
 
 
-</suite> <!-- Suite -->
+</suite> 

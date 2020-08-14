@@ -47,7 +47,7 @@ public class TestCase_RBGARequestCreation {
 		rbga.addApprover("end1cob");
 		rbga.clickOnSubmitButton();
 		rbga.displayRequestKey();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 
 	}
 	

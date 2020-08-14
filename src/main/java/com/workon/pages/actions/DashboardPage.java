@@ -116,9 +116,13 @@ public class DashboardPage extends Page {
 
 		// Assert.assertEquals(currentLoggedinUser, "END1COB");
 
+		System.out.println();
+		System.out.println();
 		System.out.println(" *******    Current Login User: " + currentLoggedinUser  +"  *******");
 		// after that click on the close button
 		click(dashboardpagelocator.closeuserIcon);
+		System.out.println();
+		System.out.println();
 		Thread.sleep(2000);
 
 		return this;

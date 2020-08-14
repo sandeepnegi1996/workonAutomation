@@ -12,32 +12,32 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class TestCase_Bug16794 {
-	 @Test(invocationCount=4)
+	 @Test(invocationCount=15)
 	  public void testUserLogin() throws InterruptedException {
 		  DashboardPage dp=new DashboardPage();
 		  
 		  
-		  dp.addItemsToFav();
+		  //dp.addItemsToFav();
 		  dp=dp.gotoUserLogin();
 		 
 		  
 		  dp.gotoWorkflows();
 		  
 		  
-		  dp.addItemsToFav();
+		//  dp.addItemsToFav();
 		  
 		  
 		  dp=dp.gotoUserLogin();
 		  
 		   dp.gotoMyFavTab();
 		  
-		  dp.removeItemsFromFav();
+		 // dp.removeItemsFromFav();
 		  
 		  
 		  dp=dp.gotoUserLogin();
 		  
 		  dp.gotoWorkflows();
-		  dp.addItemsToFav();
+		  //dp.addItemsToFav();
 		  
 		  
 		  Thread.sleep(3000);
