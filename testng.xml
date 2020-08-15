@@ -60,7 +60,14 @@
 	
 	
 	<!--APGA-11136 :  EMEA Q4  -->
-	
+	<!-- Not able to solve APGA for NOW -->
+	<!-- <test thread-count="1" name="TestCase_APGARequestCreation">
+		<classes>
+			<class
+				name="com.workon.testcases.generic.TestCase_APGARequestCreation" />
+		</classes>
+	</test>
+	 -->
 	
 	
 	
@@ -69,26 +76,15 @@
 	<!--  AM : AMLACSALTPRECOLANC-15  -->
 	<!-- TestCase_AMLACSALTPRECOLANCRequestCreation -->
 	
-	<test thread-count="1" name="TestCase_AMLACSALTPRECOLANCRequestCreation">
+	<!-- <test thread-count="1" name="TestCase_AMLACSALTPRECOLANCRequestCreation">
 		<classes>
 			<class
 				name="com.workon.testcases.generic.TestCase_AMLACSALTPRECOLANCRequestCreation" />
 		</classes>
 	</test>
+	 -->
 	
 	
-	
-	
-	
-	<!--  Remove the AMLACTFLIBMAE -->
-<!-- 	<test thread-count="1" name="amlactglibmae_Request_Creation">
-		<classes>
-			<class
-				name="com.workon.testcases.generic.TestCase_AMLACTGLIBMAERequestCreation" />
-		</classes>
-	</test> -->
-
-
 
 	<!-- <test thread-count="5" name="login_issue_tests"> <classes> <class name="com.workon.testcases.functional.bug.TestCase_Bug16794"/> 
 		</classes> </test>

@@ -41,6 +41,9 @@ public class SearchPageLocators {
 	
 	@FindBy(xpath="//a[contains(@title,'Request a new workflow for AA - Amendment Pricing / Release Notice')]")
 	public WebElement amlacsaltrecolan;
+
+	@FindBy(xpath="//a[@title='Request a new workflow for AP General Approval form']")
+	public WebElement apgaNewRequest;
 	
 	
 	

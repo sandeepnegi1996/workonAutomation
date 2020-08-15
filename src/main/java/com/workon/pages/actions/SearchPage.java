@@ -9,6 +9,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import com.workon.base.Page;
 import com.workon.pages.actions.amlacsaltrecolann.AMLACSALTRECOLANNRequestCreation;
 import com.workon.pages.actions.amlactglibmae.AMLACTGLIBMAERequestCreation;
+import com.workon.pages.actions.apga.APGARequestCreation;
 import com.workon.pages.actions.apmaze.APMAZERequestCreation;
 import com.workon.pages.actions.emeaavg.EMEAAVGRequestCreation;
 import com.workon.pages.actions.rbga.RBGARequestCreation;
@@ -129,12 +130,14 @@ public class SearchPage extends Page {
 
 	}
 
-	public void gotoAPGA() throws InterruptedException {
+	public APGARequestCreation gotoAPGA() throws InterruptedException {
 
 		type(searchpage.searchInput, "APGA");
 		System.out.println("APGA being searched");
 		action.moveToElement(searchpage.searchInput).sendKeys(Keys.ENTER).build().perform();
-
+		click(searchpage.apgaNewRequest);
+		return new APGARequestCreation();
+		
 	}
 
 	public AMLACTGLIBMAERequestCreation gotoAMLACTGLIBMAE() throws InterruptedException {
@@ -170,6 +173,7 @@ public class SearchPage extends Page {
 		
 	}
 	
+
 	
 	
 	

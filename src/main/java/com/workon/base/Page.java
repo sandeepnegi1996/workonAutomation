@@ -25,7 +25,7 @@ public class Page {
 	public static WebDriver driver = null;
 	public static Actions action = null;
 	public static WebDriverWait wait = null;
-	public static ChromeOptions chromeoptions =null;
+	public static ChromeOptions chromeoptions = null;
 
 	public static void initConfiguration() {
 
@@ -34,9 +34,9 @@ public class Page {
 		if (driver == null) {
 
 			if (Constant.BROWSER_NAME.equals("chrome")) {
-				
+
 				setChromeDriverPath();
-				ChromeOptions chromeoptions= setChromeOptions();
+				ChromeOptions chromeoptions = setChromeOptions();
 				driver = new ChromeDriver(chromeoptions);
 
 			}
@@ -48,7 +48,7 @@ public class Page {
 			driver.manage().window().maximize();
 			driver.get(baseURL);
 			action = new Actions(driver);
-			
+			wait = new WebDriverWait(driver, 10);
 			Log.info("webdriver is created");
 
 		}
@@ -65,19 +65,17 @@ public class Page {
 
 		}
 	}
-	
-	//a function to set the chromedriverpath and thechromeoptions
-	
+
+	// a function to set the chromedriverpath and thechromeoptions
+
 	public static void setChromeDriverPath() {
 		String chromedriverPath = System.getProperty("user.dir")
 				+ "\\src\\test\\resources\\executable\\chromedriver.exe";
 
 		System.setProperty("webdriver.chrome.driver", chromedriverPath);
 
-	
-
 	}
-	
+
 	public static void setFirefoxDriverPath() {
 		String firefoxdriverpath = System.getProperty("user.dir")
 				+ "\\src\\test\\resources\\executable\\geckodriver.exe";
@@ -85,7 +83,7 @@ public class Page {
 		System.setProperty("webdriver.gecko.driver", firefoxdriverpath);
 
 	}
-	
+
 	public static ChromeOptions setChromeOptions() {
 		chromeoptions = new ChromeOptions();
 		chromeoptions.addArguments("start-maximized");
@@ -95,16 +93,15 @@ public class Page {
 		chromeoptions.addArguments("--disable-popup-blocking");
 
 		chromeoptions.addArguments("--diable-infobars");
-		
+
 		return chromeoptions;
 	}
-	
 
 	// click
 
 	public static void click(WebElement element) {
 		element.click();
-		Log.info("Clicked on the element:  "+element.toString());
+		Log.info("Clicked on the element:  " + element.toString());
 
 	}
 
@@ -112,7 +109,7 @@ public class Page {
 
 	public void type(WebElement element, String inputString) {
 		element.sendKeys(inputString);
-		Log.info("Typed on the element :  "+element.toString());
+		Log.info("Typed on the element :  " + element.toString());
 	}
 
 	// any child class can use this function to switch to the new tab
@@ -120,7 +117,7 @@ public class Page {
 
 		System.out.println("******  Switching to Second Tab  ************");
 		Set<String> windowID = driver.getWindowHandles();
-		Iterator<String> itr = windowID.iterator();		
+		Iterator<String> itr = windowID.iterator();
 		String firstWindow = itr.next();
 		String secondWindow = itr.next();
 		driver.switchTo().window(secondWindow);
@@ -140,44 +137,33 @@ public class Page {
 		driver.switchTo().window(thirdWindowId);
 
 	}
-	
+
 	/*
-	 * TODO
-	 * 1. Refactor the above code means comment them 
-	 * 2. Call the switchToAnyTab whereever I am calling the switchToSecondTab and switchToThirdTab run the tests again and check whether it is working or not
+	 * TODO 1. Refactor the above code means comment them 2. Call the switchToAnyTab
+	 * whereever I am calling the switchToSecondTab and switchToThirdTab run the
+	 * tests again and check whether it is working or not
 	 * 
 	 */
-	
+
 	// any child class can use this function to switch to the new tab
-	public void switchToAnyTab(WebDriver driver,int tabNumber) {
+	public void switchToAnyTab(WebDriver driver, int tabNumber) {
 
 		System.out.println("******  Switching to Second Tab  ************");
 		Set<String> windowID = driver.getWindowHandles();
 		Iterator<String> itr = windowID.iterator();
-		
-		
-		//i want to traverse the number of times the value is passed in the argument
-		//so if two times i should traverse two times
-		String currentTab="";
-		for(int i=1;i<=tabNumber;i++) {
-			 currentTab=itr.next();
+
+		// i want to traverse the number of times the value is passed in the argument
+		// so if two times i should traverse two times
+		String currentTab = "";
+		for (int i = 1; i <= tabNumber; i++) {
+			currentTab = itr.next();
 		}
-		
+
 		driver.switchTo().window(currentTab);
 
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
-	// use to select an element by value 
+	// use to select an element by value
 	// this will be used if there is a dropdown
 	public void selectOption(WebElement element, String value) {
 
@@ -204,8 +190,7 @@ public class Page {
 	// This function is redundant i will remove it later
 	// this will get the request key from the workon page
 	public String getRequestKey() {
-		return driver.findElement(By.xpath("//b[contains(text(),'Key:')]//parent::td//following-sibling::b//a"))
-				.getText();
+		return driver.findElement(By.xpath("//b[contains(text(),'Key:')]//following-sibling::b//a")).getText();
 
 	}
 
@@ -239,7 +224,7 @@ public class Page {
 		});
 
 		if (element != null) {
-			Log.info("Element is present :  "+by.toString());
+			Log.info("Element is present :  " + by.toString());
 			return true;
 		}
 
@@ -263,9 +248,5 @@ public class Page {
 
 		return "";
 	}
-
-
-
-
 
 }
